@@ -18,11 +18,22 @@ function SignInPage() {
     });
   }, []);
 
+  const testNow = () => {
+    axios.post('http://localhost:8080/api/v1/sign-in', {
+      message: 'working'
+    }).then((response) => {
+      console.log(response.data.message)
+    }).catch((error) => {
+      console.error('Error communicating with server', error);
+    });
+  }
+
   return (
     <div>
         <p className={styles.dummyStyle}>Sign in page</p>
         <p>{messageFromServer || 'communicating with server...'}</p>
         <a href='/'>Back</a>
+        <button onClick={testNow}>Test</button>
     </div>
   );
 }
