@@ -1,0 +1,84 @@
+body {
+    /* overflow: hidden; */
+    height: 2000px;
+    background: linear-gradient(180deg, #5AB3C7 0%, rgba(74, 129, 180, 0.00) 100%);
+    color: white;
+}
+
+#logo {
+    top: 10px;
+    margin-left: 40px;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+/* default text style */
+.textstyle {
+    text-decoration: none;
+    color: var(--Contrast-Background, #FFF);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* font-family: Raleway; */
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav {
+    position: fixed;
+    top: 10px;
+    right: 0px;
+    margin-right: 40px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 50px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#welcome {
+    font-weight: 600;
+    font-size: 42px;
+}
+
+#rectangle {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 7px;
+    flex-shrink: 0;
+}
+
+#content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    margin-top: 0px;
+    /* Add some spacing between #welcome and #rectangle */
+}
+
+#rectangle-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 7px;
+    flex-shrink: 0;
+}
