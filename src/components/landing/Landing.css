@@ -1,6 +1,6 @@
 body {
-    /* overflow: hidden; */
-    height: 2000px;
+    overflow: hidden;
+    height: 800px;
     background: linear-gradient(180deg, #5AB3C7 0%, rgba(74, 129, 180, 0.00) 100%);
     color: white;
 }
@@ -58,6 +58,8 @@ nav li {
     width: 300px;
     height: 7px;
     flex-shrink: 0;
+    position: absolute;
+    bottom: 35%;
 }
 
 #content-container {
