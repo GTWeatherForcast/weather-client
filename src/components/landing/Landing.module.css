@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 body {
-    overflow: hidden;
-    height: 800px;
-    background: linear-gradient(180deg, #5AB3C7 0%, rgba(74, 129, 180, 0.00) 100%);
+    /* overflow: hidden; */
+    height: 100vh;
+    background-image: linear-gradient(180deg, #00C2FF 0%, rgba(74, 129, 180, 0.00) 100%);
+    background-repeat: no-repeat;
+    background-size: auto auto;
     color: white;
 }
 
@@ -44,7 +46,7 @@ nav li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #welcome {
@@ -68,6 +70,7 @@ nav li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
     /* Center horizontally */
     justify-content: center;
     /* Center vertically */
