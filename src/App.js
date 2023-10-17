@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignInPage from "./components/sign-in/SignIn";
 import SignUpPage from "./components/sign-up/SignUp";
 import LandingPage from "./components/landing/Landing";
-import ComponentTestPage from "./components/test/ComponentTest";
+import ComponentTestPage from "./components/demo/ComponentTest";
 
 function App() {
   return (
