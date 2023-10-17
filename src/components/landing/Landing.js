@@ -4,7 +4,7 @@ function LandingPage() {
   const signInClick = () => {};
   const signUpClick = () => {};
   return (
-    <div>
+    <div className={`${styles.landingBody}`}>
       <nav>
         <ul>
           <li className={styles.sign}>
@@ -30,10 +30,7 @@ function LandingPage() {
         <p id={styles["welcome"]} className={`${styles.center} ${styles.textstyle}`}>
           Welcome to Georgia Tech Weather Forecast!
         </p>
-
-        <div className={styles.center}>
-          <div id={styles["rectangle"]}></div>
-        </div>
+        <div id={styles["rectangle"]}></div>
       </div>
     </div>
   );
