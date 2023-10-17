@@ -1,4 +1,5 @@
 import styles from "./Landing.module.css";
+import { LocationSearch, SearchBar } from "../inputs/SearchBar"
 
 function LandingPage() {
   const signInClick = () => {};
@@ -31,6 +32,7 @@ function LandingPage() {
           Welcome to Georgia Tech Weather Forecast!
         </p>
         <div id={styles["rectangle"]}></div>
+        <LocationSearch />
       </div>
     </div>
   );

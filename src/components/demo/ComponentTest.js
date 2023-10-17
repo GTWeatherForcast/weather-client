@@ -1,4 +1,4 @@
-import LocationSearch from "../inputs/LocationSearch";
+import LocationSearch from "../inputs/SearchBar";
 
 function ComponentTestPage() {
     return (

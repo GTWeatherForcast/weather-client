@@ -71,6 +71,7 @@ nav li {
     flex-shrink: 0;
     /* position: absolute; */
     /* bottom: 35%; */
+    margin-bottom: 3em;
 }
 
 #content-container {
