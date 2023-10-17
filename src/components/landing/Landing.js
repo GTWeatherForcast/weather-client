@@ -7,14 +7,14 @@ function LandingPage() {
     <div>
       <nav>
         <ul>
-          <li class="sign">
-            <a class="navBarText textstyle" onClick={() => signInClick}>
+          <li className="sign">
+            <a className="navBarText textstyle" onClick={() => signInClick}>
               sign in
             </a>
           </li>
 
-          <li class="sign">
-            <a class="sign navBarText textstyle" onClick={() => signUpClick}>
+          <li className="sign">
+            <a className="sign navBarText textstyle" onClick={() => signUpClick}>
               sign up
             </a>
           </li>
@@ -27,11 +27,11 @@ function LandingPage() {
       </a> */}
 
       <div id="content-container">
-        <p id="welcome" class="center textstyle">
+        <p id="welcome" className="center textstyle">
           Welcome to Georgia Tech Weather Forecast!
         </p>
 
-        <div class="center">
+        <div className="center">
           <div id="rectangle"></div>
         </div>
       </div>
