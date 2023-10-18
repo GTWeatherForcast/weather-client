@@ -22,6 +22,10 @@ function LandingPage() {
         </ul>
       </nav>
 
+      <div id = "gt-title" class="textstyle">
+          <p>gt forcast</p>
+      </div>
+
       {/* <a id="textstyle" href="#">
         gt forecast`
 

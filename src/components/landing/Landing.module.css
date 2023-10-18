@@ -59,6 +59,7 @@ nav li {
 #welcome {
     font-weight: 600;
     font-size: 42px;
+    user-select: none;
 }
 
 #rectangle {
@@ -96,4 +97,11 @@ nav li {
     width: 300px;
     height: 7px;
     flex-shrink: 0;
+}
+
+#gt-title {
+    position: fixed;
+    left: 0px;
+    top: 5px;
+    margin-left: 40px;
 }
