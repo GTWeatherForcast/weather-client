@@ -1,39 +1,42 @@
-import styles from "./Landing.css";
+import styles from "./Landing.module.css";
+import { LocationSearch, SearchBar } from "../inputs/SearchBar"
 
 function LandingPage() {
   const signInClick = () => {};
   const signUpClick = () => {};
   return (
-    <div>
+    <div className={`${styles.landingBody}`}>
       <nav>
         <ul>
-          <li class="sign">
-            <a class="navBarText textstyle" onClick={() => signInClick}>
+          <li className={styles.sign}>
+            <a className={`${styles.navBarText} ${styles.textstyle}`} onClick={() => signInClick}>
               sign in
             </a>
           </li>
 
-          <li class="sign">
-            <a class="sign navBarText textstyle" onClick={() => signUpClick}>
+          <li className={styles.sign}>
+            <a className={`${styles.sign} ${styles.navBarText} ${styles.textstyle}`} onClick={() => signUpClick}>
               sign up
             </a>
           </li>
         </ul>
       </nav>
 
+      <div id={styles["gt-title"]} class={styles.textstyle}>
+          <p>gt forecast</p>
+      </div>
+
       {/* <a id="textstyle" href="#">
         gt forecast`
 
       </a> */}
 
-      <div id="content-container">
-        <p id="welcome" class="center textstyle">
+      <div id={styles["content-container"]}>
+        <p id={styles["welcome"]} className={`${styles.center} ${styles.textstyle}`}>
           Welcome to Georgia Tech Weather Forecast!
         </p>
-
-        <div class="center">
-          <div id="rectangle"></div>
-        </div>
+        <div id={styles["rectangle"]}></div>
+        <LocationSearch />
       </div>
     </div>
   );

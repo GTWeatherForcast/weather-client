@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 body {
-    overflow: hidden;
-    height: 800px;
-    background: linear-gradient(180deg, #5AB3C7 0%, rgba(74, 129, 180, 0.00) 100%);
+    /* overflow: hidden; */
+    /* height: 100vh; */
+    /* color: #00C2FF; */
+}
+
+.landingBody {
+    background-image: linear-gradient(180deg, #00C2FF 0%, rgba(74, 129, 180, 0.00) 100%);
     color: white;
+    height: 100vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: auto auto;
 }
 
 #logo {
@@ -17,7 +27,7 @@ body {
     text-decoration: none;
     color: var(--Contrast-Background, #FFF);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /* font-family: Raleway; */
+    font-family: Raleway;
     font-size: 20px;
     font-weight: 600;
 }
@@ -38,16 +48,18 @@ nav li {
     margin-left: 50px;
 }
 
+/* BROKEN, DO NOT USE */
 .center {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #welcome {
     font-weight: 600;
     font-size: 42px;
+    user-select: none;
 }
 
 #rectangle {
@@ -58,14 +70,16 @@ nav li {
     width: 300px;
     height: 7px;
     flex-shrink: 0;
-    position: absolute;
-    bottom: 35%;
+    /* position: absolute; */
+    /* bottom: 35%; */
+    margin-bottom: 3em;
 }
 
 #content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
     /* Center horizontally */
     justify-content: center;
     /* Center vertically */
@@ -83,4 +97,11 @@ nav li {
     width: 300px;
     height: 7px;
     flex-shrink: 0;
+}
+
+#gt-title {
+    position: fixed;
+    left: 0px;
+    top: 5px;
+    margin-left: 40px;
 }
