@@ -1,9 +1,7 @@
 import styles from "./Landing.module.css";
-import { LocationSearch, SearchBar } from "../inputs/SearchBar"
+import { LocationSearch } from "../inputs/SearchBar"
 
 function LandingPage() {
-  const signInClick = () => {};
-  const signUpClick = () => {};
   return (
     <div className={`${styles.landingBody}`}>
       <nav className={`${styles.mainNav} ${styles.textStyle}`}>
