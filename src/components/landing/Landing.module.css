@@ -15,6 +15,7 @@ body {
     background-size: auto auto;
 }
 
+/* seemingly unused */
 #logo {
     top: 10px;
     margin-left: 40px;
@@ -23,7 +24,7 @@ body {
 }
 
 /* default text style */
-.textstyle {
+.textStyle {
     text-decoration: none;
     color: var(--Contrast-Background, #FFF);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -32,19 +33,19 @@ body {
     font-weight: 600;
 }
 
-nav {
-    position: fixed;
+nav.mainNav_old {
+    position: absolute;
     top: 10px;
     right: 0px;
     margin-right: 40px;
 }
 
-nav ul {
+.mainNav_old ul {
     display: flex;
     list-style: none;
 }
 
-nav li {
+.mainNav_old li {
     margin-left: 50px;
 }
 
@@ -100,9 +101,38 @@ nav li {
     flex-shrink: 0;
 }
 
-#gt-title {
-    position: fixed;
+/* #gt-title {
+    position: absolute;
     left: 0px;
     top: 5px;
     margin-left: 40px;
+} */
+
+/* NAVIGATION */
+
+/* MAIN NAVBAR */
+.mainNav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.mainNav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.mainNav li {
+    margin: 20px;
+    /* display: inline; */
+}
+
+.mainNav a {
+    color: inherit;
+    text-decoration: inherit;
 }

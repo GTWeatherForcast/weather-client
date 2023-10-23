@@ -6,33 +6,18 @@ function LandingPage() {
   const signUpClick = () => {};
   return (
     <div className={`${styles.landingBody}`}>
-      <nav>
-        <ul>
-          <li className={styles.sign}>
-            <a className={`${styles.navBarText} ${styles.textstyle}`} onClick={() => signInClick}>
-              sign in
-            </a>
-          </li>
-
-          <li className={styles.sign}>
-            <a className={`${styles.sign} ${styles.navBarText} ${styles.textstyle}`} onClick={() => signUpClick}>
-              sign up
-            </a>
-          </li>
-        </ul>
+      <nav className={`${styles.mainNav} ${styles.textStyle}`}>
+        <ol>
+          <li><a href=".">gt forecast</a></li>
+        </ol>
+        <ol>
+          <li><a href="./login">sign in</a></li>
+          <li><a href="./signup">sign up</a></li>
+        </ol>
       </nav>
 
-      <div id={styles["gt-title"]} class={styles.textstyle}>
-          <p>gt forecast</p>
-      </div>
-
-      {/* <a id="textstyle" href="#">
-        gt forecast`
-
-      </a> */}
-
       <div id={styles["content-container"]}>
-        <p id={styles["welcome"]} className={`${styles.center} ${styles.textstyle}`}>
+        <p id={styles["welcome"]} className={`${styles.center} ${styles.textStyle}`}>
           Welcome to Georgia Tech Weather Forecast!
         </p>
         <div id={styles["rectangle"]}></div>
