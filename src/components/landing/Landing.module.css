@@ -123,12 +123,12 @@ nav.mainNav_old {
 .mainNav ol {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
+    margin: 25px 20px;
 }
 
 .mainNav li {
-    margin: 20px;
+    margin: 0 20px 0 20px;
     /* display: inline; */
 }
 
