@@ -60,6 +60,7 @@ nav li {
     font-weight: 600;
     font-size: 42px;
     user-select: none;
+    text-align: center;
 }
 
 #rectangle {
