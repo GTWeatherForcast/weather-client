@@ -39,7 +39,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
   return (
     <div className={`${styles.landingBody} ${ cardIndex === 0 ? styles.shiftForLeft : (cardIndex === 2 ? styles.shiftForRight : "")}`}>
       <div className={styles.landingNav}>
-        <nav className={`${styles.mainNav} textStyle`}>
+        <nav className={`${styles.mainNav}`}>
           <ol>
             {/* <li><Link to="/">gt forecast</Link></li> */}
             <li><button className={`${styles.fakeLink} textStyle`} onClick={returnToLanding}>gt forecast</button></li>
