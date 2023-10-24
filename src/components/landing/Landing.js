@@ -45,7 +45,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       }`}
     >
       <div className={styles.landingNav}>
-        <nav className={`${styles.mainNav} textStyle`}>
+        <nav className={`${styles.mainNav}`}>
           <ol>
             {/* <li><Link to="/">gt forecast</Link></li> */}
             <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={returnToLanding}>gt forecast</button></li>
