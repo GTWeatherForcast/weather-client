@@ -10,6 +10,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
 
   function returnToLanding() {
     setCardIndex(1);
+    window.history.replaceState(null, "", "..");
     // todo: modify URL to have / without updating page
   }
 
@@ -18,6 +19,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       returnToLanding();
     } else {
       setCardIndex(2);
+      window.history.replaceState(null, "", "login");
       // todo: modify URL to have /login without updating page
     }
   }
@@ -27,6 +29,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       returnToLanding();
     } else {
       setCardIndex(0);
+      window.history.replaceState(null, "", "signup");
       // todo: modify URL to have /signup without updating page
     }
   }
