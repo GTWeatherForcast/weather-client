@@ -92,6 +92,16 @@
     text-decoration: inherit;
 }
 
+.fakeLink {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    /* text-decoration: underline; */
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
 /** Cards */
 
 .landingBody {
@@ -102,7 +112,7 @@
     background-repeat: no-repeat;
     background-size: auto auto;
     border-radius: 0;
-    /* transition: border-radius 0.5s; */
+    transition: border-radius 0.5s, right 0.5s, left 0.5s;
     /* flex: 1 1 auto; */
     position: absolute;
     /* width: 100%; */
@@ -115,17 +125,15 @@
 .shiftForRight {
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
-    /* width: 70%; */
     right: 30%;
-    transition: border-bottom-right-radius 0.5s, border-top-right-radius 0.5s, right 0.5s;
+    transition: border-radius 0.5s, right 0.5s, left 0.5s;
 }
 
 .shiftForLeft {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
-    /* width: 70%; */
     left: 30%;
-    transition: border-bottom-left-radius 0.5s, border-top-left-radius 0.5s, left 0.5s;
+    transition: border-radius 0.5s, left 0.5s, right 0.5s;
 }
 
 .cardRight {

@@ -1,6 +1,7 @@
 import {
   createBrowserRouter,
   RouterProvider,
+  redirect,
   BrowserRouter,
   Routes,
   Route
@@ -13,32 +14,33 @@ import ComponentTestPage from "./components/demo/ComponentTest";
 import ErrorPage from "./components/error-pages/ErrorPage";
 
 function App() {
-  let showSignIn = false;
-  let showSignUp = false;
+  // let showSignIn = false;
+  // let showSignUp = false;
   const router = createBrowserRouter(
     [
       {
         path: "/",
         element: <LandingPage />,
         errorElement: <ErrorPage />,
-        children: [
-          {
-            path: "login",
-            loader: () => {
-              showSignIn = true;
-              console.log("signin");
-              return (<></>);
-             },
-            element: <SignInPage />
-          },
-          {
-            path: "signup",
-            // loader: () => {
-            //   showSignUp = true;
-            // },
-            element: <SignUpPage />
-          }
-        ],
+        // children: [
+        //   {
+        //     path: "login",
+        //     // loader: () => {
+        //     //   showSignIn = true;
+        //     //   console.log("signin");
+        //     //   // return redirect(".");
+        //     //   return (<></>);
+        //     //  },
+        //     element: <SignInPage />
+        //   },
+        //   {
+        //     path: "signup",
+        //     // loader: () => {
+        //     //   showSignUp = true;
+        //     // },
+        //     element: <SignUpPage />
+        //   }
+        // ],
       },
       {
         path: "/test",

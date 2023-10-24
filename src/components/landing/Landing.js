@@ -1,19 +1,29 @@
 import styles from "./Landing.module.css";
 import { LocationSearch } from "../inputs/SearchBar"
-import { Outlet, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useState } from "react";
 
-export function LandingCard({ isShowingLeftCard = false, isShowingRightCard = false }) {  
+// 0 = no cards, 1 = signin (right), 2 = signup (left)
+export function LandingCard({ cardIndex = 0 }) {  
+
+  function toggleSignIn() {
+
+  }
+
+  function toggleSignUp() {
+
+  }
+
   return (
-    <div className={`${styles.landingBody} ${ isShowingLeftCard ? styles.shiftForLeft : ""} ${ isShowingRightCard ? styles.shiftForRight : ""}`}>
+    <div className={`${styles.landingBody} ${ cardIndex === 2 ? styles.shiftForLeft : (cardIndex === 1 ? styles.shiftForRight : "")}`}>
       <div className={styles.landingNav}>
         <nav className={`${styles.mainNav} ${styles.textStyle}`}>
           <ol>
             <li><Link to="/">gt forecast</Link></li>
           </ol>
           <ol>
-            <li><Link to="/login">sign in</Link></li>
-            <li><Link to="/signup">sign up</Link></li>
+            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignIn}>sign in</button></li>
+            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignUp}>sign up</button></li>
           </ol>
         </nav>
       </div>
@@ -40,7 +50,7 @@ export default function LandingPage() {
         left card
       </div>
 
-      <LandingCard isShowingLeftCard={isShowingLeftCard} isShowingRightCard={isShowingRightCard} />
+      <LandingCard cardIndex={0}/>
 
       <div className={styles.cardRight}>
         right card
