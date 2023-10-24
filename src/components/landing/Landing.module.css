@@ -2,19 +2,9 @@
 
 .landingRoot {
     display: relative;
-
 }
 
 /* default text style */
-.textStyle {
-    text-decoration: none;
-    color: var(--Contrast-Background, #FFF);
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Raleway;
-    font-size: 20px;
-    font-weight: 600;
-}
-
 #welcome {
     font-weight: 600;
     font-size: 42px;
