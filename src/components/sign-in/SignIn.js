@@ -23,6 +23,9 @@ function SignInPage() {
         <p className={styles.dummyStyle}>Sign in page</p>
         <p>{messageFromServer || 'communicating with server...'}</p>
         <a href='/'>Back</a>
+        <p>
+        <a href='sign-up'>Sign Up!</a>
+        </p>
     </div>
   );
 }
