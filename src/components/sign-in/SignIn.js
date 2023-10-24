@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { LandingCard } from "../landing/Landing";
+import stylesLanding from '../landing/Landing.module.css';
 import styles from "./SignIn.css";
 
-function SignInPage() {
+// todo: migrate behavior into new Signin UI
+function LogInPage() {
   const [messageFromServer, setMessageFromServer] = useState(undefined);
 
   useEffect(() => {
@@ -48,4 +51,14 @@ function SignInPage() {
   );
 }
 
-export default SignInPage;
+export default function SignInPage() {
+  return (
+    <div className={stylesLanding.landingRoot}>
+      <LandingCard isShowingRightCard={true} />
+
+      <div className={stylesLanding.cardRight}>
+        right card
+      </div>
+    </div>
+  );
+}

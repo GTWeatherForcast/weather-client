@@ -13,6 +13,8 @@ import ComponentTestPage from "./components/demo/ComponentTest";
 import ErrorPage from "./components/error-pages/ErrorPage";
 
 function App() {
+  let showSignIn = false;
+  let showSignUp = false;
   const router = createBrowserRouter(
     [
       {
@@ -22,18 +24,26 @@ function App() {
         children: [
           {
             path: "login",
-            element: <SignInPage />,
+            loader: () => {
+              showSignIn = true;
+              console.log("signin");
+              return (<></>);
+             },
+            element: <SignInPage />
           },
           {
             path: "signup",
-            element: <SignUpPage />,
-          },
+            // loader: () => {
+            //   showSignUp = true;
+            // },
+            element: <SignUpPage />
+          }
         ],
       },
       {
-        path: "test",
+        path: "/test",
         element: <ComponentTestPage />
-      }
+      },
     ]
   );
 
