@@ -3,23 +3,41 @@ import { LocationSearch } from "../inputs/SearchBar"
 import { Link } from "react-router-dom"
 import { useState } from "react";
 
-// 0 = no cards, 1 = signin (right), 2 = signup (left)
-export function LandingCard({ cardIndex = 0 }) {  
+// 0 = left card (signup)
+// 1 = no card(landing only)
+// 2 = right card(signin)
+export function LandingCard({ setCardIndex, cardIndex = 1 }) {  
+
+  function returnToLanding() {
+    setCardIndex(1);
+    // todo: modify URL to have / without updating page
+  }
 
   function toggleSignIn() {
-
+    if (cardIndex === 2) {
+      returnToLanding();
+    } else {
+      setCardIndex(2);
+      // todo: modify URL to have /login without updating page
+    }
   }
 
   function toggleSignUp() {
-
+    if (cardIndex === 0) {
+      returnToLanding();
+    } else {
+      setCardIndex(0);
+      // todo: modify URL to have /signup without updating page
+    }
   }
 
   return (
-    <div className={`${styles.landingBody} ${ cardIndex === 2 ? styles.shiftForLeft : (cardIndex === 1 ? styles.shiftForRight : "")}`}>
+    <div className={`${styles.landingBody} ${ cardIndex === 0 ? styles.shiftForLeft : (cardIndex === 2 ? styles.shiftForRight : "")}`}>
       <div className={styles.landingNav}>
         <nav className={`${styles.mainNav} ${styles.textStyle}`}>
           <ol>
-            <li><Link to="/">gt forecast</Link></li>
+            {/* <li><Link to="/">gt forecast</Link></li> */}
+            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={returnToLanding}>gt forecast</button></li>
           </ol>
           <ol>
             <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignIn}>sign in</button></li>
@@ -40,9 +58,8 @@ export function LandingCard({ cardIndex = 0 }) {
   );
 }
 
-export default function LandingPage() {
-  const [isShowingLeftCard, showLeftCard] = useState(false);
-  const [isShowingRightCard, showRightCard] = useState(false);
+export default function LandingPage({initialCardIndex = 1}) {
+  const [cardIndex, setCardIndex] = useState(initialCardIndex);
   
   return (
     <div className={styles.landingRoot}>
@@ -50,7 +67,7 @@ export default function LandingPage() {
         left card
       </div>
 
-      <LandingCard cardIndex={0}/>
+      <LandingCard setCardIndex={setCardIndex} cardIndex={cardIndex}/>
 
       <div className={styles.cardRight}>
         right card
