@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 .landingRoot {
-    display: flex;
+    display: relative;
+
 }
 
 /* default text style */
@@ -102,28 +103,41 @@
     background-size: auto auto;
     border-radius: 0;
     /* transition: border-radius 0.5s; */
-    flex: 1 1 auto;
+    /* flex: 1 1 auto; */
+    position: absolute;
+    /* width: 100%; */
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
 
 .shiftForRight {
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
-    transition: border-bottom-right-radius 0.5s, border-top-right-radius 0.5s;
+    /* width: 70%; */
+    right: 30%;
+    transition: border-bottom-right-radius 0.5s, border-top-right-radius 0.5s, right 0.5s;
 }
 
 .shiftForLeft {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
-    transition: border-bottom-left-radius 0.5s, border-top-left-radius 0.5s;
+    /* width: 70%; */
+    left: 30%;
+    transition: border-bottom-left-radius 0.5s, border-top-left-radius 0.5s, left 0.5s;
 }
 
 .cardRight {
-    flex: 0 1 auto;
-    width: 600px;
+    /* flex: 0 1 auto; */
+    position: absolute;
+    width: 30%;
+    right: 0px;
 }
 
 .cardLeft {
-    flex: 0 1 auto;
-    width: 600px;
+    /* flex: 0 1 auto; */
+    position: absolute;
+    width: 30%;
+    left: 0px;
 }

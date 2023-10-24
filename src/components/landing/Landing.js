@@ -5,12 +5,12 @@ import { Outlet, Link } from "react-router-dom"
 export default function LandingPage() {
   return (
     <div className={styles.landingRoot}>
-      {/* <div className={styles.cardLeft}>
+      <div className={styles.cardLeft}>
         left card
-      </div> */}
+      </div>
 
       {/* ${styles.shiftForRight} ${styles.shiftForLeft} */}
-      <div className={`${styles.landingBody} ${styles.shiftForRight}`}>
+      <div className={`${styles.landingBody} `}>
         <div className={styles.landingNav}>
           <nav className={`${styles.mainNav} ${styles.textStyle}`}>
             <ol>
