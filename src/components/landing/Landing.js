@@ -1,7 +1,8 @@
 import styles from "./Landing.module.css";
 import { LocationSearch } from "../inputs/SearchBar"
+import { Outlet } from "react-router-dom"
 
-function LandingPage() {
+export default function LandingPage() {
   return (
     <div className={`${styles.landingBody}`}>
       <nav className={`${styles.mainNav} ${styles.textStyle}`}>
@@ -21,8 +22,8 @@ function LandingPage() {
         <div id={styles["rectangle"]}></div>
         <LocationSearch />
       </div>
+      {/* todo: change classes to reflect whether it is signup or login page so we can move stuff around */}
+      <Outlet />
     </div>
   );
 }
-
-export default LandingPage;
