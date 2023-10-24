@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
-.landingBody {
-    background-image: linear-gradient(180deg, #00C2FF 0%, rgba(74, 129, 180, 0.00) 100%);
-    color: white;
-    height: 100vh;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: auto auto;
+.landingRoot {
+    display: flex;
 }
 
 /* default text style */
@@ -63,9 +58,13 @@
     flex-shrink: 0;
 }
 
-/* NAVIGATION */
+/** NAVIGATION */
 
 /* MAIN NAVBAR */
+.landingNav {
+    position: relative;
+}
+
 .mainNav {
     position: absolute;
     width: 100%;
@@ -90,4 +89,41 @@
 .mainNav a {
     color: inherit;
     text-decoration: inherit;
+}
+
+/** Cards */
+
+.landingBody {
+    background-image: linear-gradient(180deg, #00C2FF 0%, rgba(74, 129, 180, 0.00) 100%);
+    color: white;
+    height: 100vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-radius: 0;
+    /* transition: border-radius 0.5s; */
+    flex: 1 1 auto;
+}
+
+
+.shiftForRight {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: border-bottom-right-radius 0.5s, border-top-right-radius 0.5s;
+}
+
+.shiftForLeft {
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    transition: border-bottom-left-radius 0.5s, border-top-left-radius 0.5s;
+}
+
+.cardRight {
+    flex: 0 1 auto;
+    width: 600px;
+}
+
+.cardLeft {
+    flex: 0 1 auto;
+    width: 600px;
 }
