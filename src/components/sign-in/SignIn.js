@@ -4,8 +4,7 @@ import { LandingCard } from "../landing/Landing";
 import stylesLanding from '../landing/Landing.module.css';
 import styles from "./SignIn.css";
 
-// todo: migrate behavior into new Signin UI
-function LogInPage() {
+export default function SignInPage() {
   const [messageFromServer, setMessageFromServer] = useState(undefined);
 
   useEffect(() => {
@@ -47,18 +46,6 @@ function LogInPage() {
       <p id="logo">gt forecast</p>
       <p>{messageFromServer || "communicating with server..."}</p>
       <a href="/">Back</a>
-    </div>
-  );
-}
-
-export default function SignInPage() {
-  return (
-    <div className={stylesLanding.landingRoot}>
-      <LandingCard isShowingRightCard={true} />
-
-      <div className={stylesLanding.cardRight}>
-        right card
-      </div>
     </div>
   );
 }

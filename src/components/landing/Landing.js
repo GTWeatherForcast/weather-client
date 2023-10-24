@@ -1,11 +1,12 @@
 import styles from "./Landing.module.css";
 import { LocationSearch } from "../inputs/SearchBar"
-import { Link } from "react-router-dom"
+import SignInPage from "../sign-in/SignIn";
+import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
 
-// 0 = left card (signup)
-// 1 = no card(landing only)
-// 2 = right card(signin)
+// 0 = left card
+// 1 = no card
+// 2 = right card
 export function LandingCard({ setCardIndex, cardIndex = 1 }) {  
 
   function returnToLanding() {
@@ -67,13 +68,13 @@ export default function LandingPage({initialCardIndex = 1}) {
   return (
     <div className={styles.landingRoot}>
       <div className={styles.cardLeft}>
-        left card
+        <SignInPage />
       </div>
 
       <LandingCard setCardIndex={setCardIndex} cardIndex={cardIndex}/>
 
       <div className={styles.cardRight}>
-        right card
+        <SignUpPage />
       </div>
     </div>
   );

@@ -4,12 +4,8 @@ import { LandingCard } from '../landing/Landing';
 
 function SignUpPage() {
   return (
-    <div className={stylesLanding.landingRoot}>
-      <div className={stylesLanding.cardLeft}>
-        left card
-      </div>
-
-      <LandingCard isShowingLeftCard={true} />
+    <div>
+      Sign up form goes here
     </div>
   );
 }
