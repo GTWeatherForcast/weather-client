@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { LandingCard } from "../landing/Landing";
+import stylesLanding from '../landing/Landing.module.css';
 import styles from "./SignIn.css";
 
-function SignInPage() {
+export default function SignInPage() {
   const [messageFromServer, setMessageFromServer] = useState(undefined);
 
   useEffect(() => {
@@ -47,5 +49,3 @@ function SignInPage() {
     </div>
   );
 }
-
-export default SignInPage;

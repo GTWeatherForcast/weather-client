@@ -1,29 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
-body {
-    /* overflow: hidden; */
-    /* height: 100vh; */
-    /* color: #00C2FF; */
-}
+.landingRoot {
+    display: relative;
 
-.landingBody {
-    background-image: linear-gradient(180deg, #00C2FF 0%, rgba(74, 129, 180, 0.00) 100%);
-    color: white;
-    height: 100vh;
-    background-color: white;
-    background-repeat: no-repeat;
-    background-size: auto auto;
-}
-
-#logo {
-    top: 10px;
-    margin-left: 40px;
-    text-decoration: none;
-    margin-right: auto;
 }
 
 /* default text style */
-.textstyle {
+.textStyle {
     text-decoration: none;
     color: var(--Contrast-Background, #FFF);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -32,34 +15,11 @@ body {
     font-weight: 600;
 }
 
-nav {
-    position: fixed;
-    top: 10px;
-    right: 0px;
-    margin-right: 40px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav li {
-    margin-left: 50px;
-}
-
-/* BROKEN, DO NOT USE */
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh; */
-}
-
 #welcome {
     font-weight: 600;
     font-size: 42px;
     user-select: none;
+    text-align: center;
 }
 
 #rectangle {
@@ -99,9 +59,93 @@ nav li {
     flex-shrink: 0;
 }
 
-#gt-title {
-    position: fixed;
+/** NAVIGATION */
+
+/* MAIN NAVBAR */
+.landingNav {
+    position: relative;
+}
+
+.mainNav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.mainNav ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 25px 20px;
+}
+
+.mainNav li {
+    margin: 0 20px 0 20px;
+    /* display: inline; */
+}
+
+.mainNav a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.fakeLink {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    /* text-decoration: underline; */
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+/** Cards */
+
+.landingBody {
+    background-image: linear-gradient(180deg, #00C2FF 0%, rgba(74, 129, 180, 0.00) 100%);
+    color: white;
+    height: 100vh;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-radius: 0;
+    transition: border-radius 0.5s, right 0.5s, left 0.5s;
+    /* flex: 1 1 auto; */
+    position: absolute;
+    /* width: 100%; */
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+.shiftForRight {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    right: 30%;
+    transition: border-radius 0.5s, right 0.5s, left 0.5s;
+}
+
+.shiftForLeft {
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    left: 30%;
+    transition: border-radius 0.5s, left 0.5s, right 0.5s;
+}
+
+.cardRight {
+    /* flex: 0 1 auto; */
+    position: absolute;
+    width: 30%;
+    right: 0px;
+}
+
+.cardLeft {
+    /* flex: 0 1 auto; */
+    position: absolute;
+    width: 30%;
     left: 0px;
-    top: 5px;
-    margin-left: 40px;
 }

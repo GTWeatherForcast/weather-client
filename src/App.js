@@ -1,22 +1,38 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import SignInPage from "./components/sign-in/SignIn";
-import SignUpPage from "./components/sign-up/SignUp";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import LandingPage from "./components/landing/Landing";
 import ComponentTestPage from "./components/demo/ComponentTest";
-import NotFoundPage from "./components/error-pages/NotFound";
+import ErrorPage from "./components/error-pages/ErrorPage";
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <LandingPage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/test",
+      element: <ComponentTestPage />
+    },
+    {
+      path: "login",
+      element: <LandingPage initialCardIndex={0} />
+    },
+    {
+      path: "signup",
+      element: <LandingPage initialCardIndex={2}/>
+    }
+  ]
+);
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="" element={<LandingPage />} />
-        <Route path="sign-in" element={<SignInPage />} />
-        <Route path="sign-up" element={<SignUpPage />} />
-        <Route path="test" element={<ComponentTestPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    <RouterProvider router={router} />
+  )
 }
 
 export default App;
