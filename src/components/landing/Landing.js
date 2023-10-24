@@ -15,22 +15,22 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
     // todo: modify URL to have / without updating page
   }
 
-  function toggleSignIn() {
+  function toggleSignUp() {
     if (cardIndex === 2) {
       returnToLanding();
     } else {
       setCardIndex(2);
-      window.history.replaceState(null, "", "login");
+      window.history.replaceState(null, "", "signup");
       // todo: modify URL to have /login without updating page
     }
   }
 
-  function toggleSignUp() {
+  function toggleSignIn() {
     if (cardIndex === 0) {
       returnToLanding();
     } else {
       setCardIndex(0);
-      window.history.replaceState(null, "", "signup");
+      window.history.replaceState(null, "", "login");
       // todo: modify URL to have /signup without updating page
     }
   }

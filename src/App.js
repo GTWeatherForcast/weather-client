@@ -20,11 +20,11 @@ const router = createBrowserRouter(
     },
     {
       path: "login",
-      element: <LandingPage initialCardIndex={2} />
+      element: <LandingPage initialCardIndex={0} />
     },
     {
       path: "signup",
-      element: <LandingPage initialCardIndex={0}/>
+      element: <LandingPage initialCardIndex={2}/>
     }
   ]
 );
