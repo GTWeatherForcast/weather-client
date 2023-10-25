@@ -41,7 +41,7 @@
 
 
 /* Global (shared) styles */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
@@ -63,7 +63,7 @@
 }
 
 .cardRoot h1, h2, h3, h4, h5 {
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .signupForm {
