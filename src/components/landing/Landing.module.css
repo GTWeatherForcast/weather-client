@@ -113,27 +113,31 @@
 .shiftForRight {
     border-bottom-right-radius: 30px;
     border-top-right-radius: 30px;
-    right: 30%;
+    /* right: 30%; */
+    right: 500px;
     transition: border-radius 0.5s, right 0.5s, left 0.5s;
 }
 
 .shiftForLeft {
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
-    left: 30%;
+    /* left: 30%; */
+    left: 500px;
     transition: border-radius 0.5s, left 0.5s, right 0.5s;
 }
 
 .cardRight {
     /* flex: 0 1 auto; */
     position: absolute;
-    width: 30%;
+    /* width: 30%; */
+    width: 500px;
     right: 0px;
 }
 
 .cardLeft {
     /* flex: 0 1 auto; */
     position: absolute;
-    width: 30%;
+    /* width: 30%; */
+    width: 500px;
     left: 0px;
 }

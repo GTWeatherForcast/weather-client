@@ -10,7 +10,9 @@ function SignUpPage() {
 
 // TODO: prevent auto form submission until we want to handle this stuff
   return (
-    <div id="cardRoot">
+    <div className="cardRoot">
+      <h2>SIGN UP FOR FREE</h2>
+      <p>We won't bite, we promise</p>
       <form action="" className="signupForm">
         <label for="username">Username</label>
         <input
