@@ -11,61 +11,84 @@ function SignUpPage() {
 // TODO: prevent auto form submission until we want to handle this stuff
   return (
     <div className="cardRoot">
-      <h2>SIGN UP FOR FREE</h2>
-      <p>We won't bite, we promise</p>
+      <h2 className="centerText">SIGN UP FOR FREE</h2>
+      <p className="centerText">We won't bite, we promise</p>
+
       <form action="" className="signupForm">
-        <label for="username">Username</label>
-        <input
-          id="username"
-          className={`${styles.textInput}`}
-          type="text"
-          placeholder=""
-          value={username}
-          onChange={(e) => { setUsername(e.target.value); }}
-          onSubmit={(e) => { e.preventDefault(); }}
-        />
+        <div className="inputDiv">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            className={`${styles.textInput}`}
+            type="text"
+            data-label="Username"
+            placeholder=""
+            value={username}
+            onChange={(e) => { setUsername(e.target.value); }}
+            onSubmit={(e) => { e.preventDefault(); }}
+          />
+        </div>
 
-        <label for="email">Email</label>
-        <input
-          id="email"
-          className={`${styles.textInput}`}
-          type="text"
-          placeholder=""
-          value={email}
-          onChange={(e) => { setEmail(e.target.value); }}
-          onSubmit={(e) => { e.preventDefault(); }}
-        />  
+        <div className="inputDiv">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            className={`${styles.textInput}`}
+            type="text"
+            data-label="Email"
+            placeholder=""
+            value={email}
+            onChange={(e) => { setEmail(e.target.value); }}
+            onSubmit={(e) => { e.preventDefault(); }}
+          />  
+        </div>
 
-        <label for="password">Password</label>
-        <input
-          id="password"
-          className={`${styles.textInput}`}
-          type="password"
-          placeholder=""
-          value={password}
-          onChange={(e) => { setPassword(e.target.value); }}
-          onSubmit={(e) => { e.preventDefault(); }}
-        /> 
+        <div className="inputDiv">
+          <label for="password">Password</label>
+          <input
+            id="password"
+            className={`${styles.textInput}`}
+            type="password"
+            data-label="Password"
+            placeholder=""
+            value={password}
+            onChange={(e) => { setPassword(e.target.value); }}
+            onSubmit={(e) => { e.preventDefault(); }}
+          /> 
+        </div>
 
-        <label for="password2">Confirm Password</label>
-        <input
-          id="password2"
-          className={`${styles.textInput}`}
-          type="password"
-          placeholder=""
-          value={password2}
-          onChange={(e) => { setPassword2(e.target.value); }}
-          onSubmit={(e) => { e.preventDefault(); }}
-        /> 
+        <div className="inputDiv">
+          <label for="password2">Confirm Password</label>
+          <input
+            id="password2"
+            className={`${styles.textInput}`}
+            type="password"
+            data-label="Password"
+            placeholder=""
+            value={password2}
+            onChange={(e) => { setPassword2(e.target.value); }}
+            onSubmit={(e) => { e.preventDefault(); }}
+          /> 
+        </div>
 
-        <input
-          id="signup"
-          className={`${styles.textInput}`}
-          type="submit"
-          value="Sign Up"
-          onChange={(e) => { e.preventDefault(); }}
-          onSubmit={(e) => { e.preventDefault(); }}
-        /> 
+        <div className="inputDiv">
+          <input
+            id="signup"
+            className={`${styles.textInput}`}
+            type="submit"
+            value="Sign Up"
+            onChange={(e) => { e.preventDefault(); }}
+            onSubmit={(e) => { e.preventDefault(); }}
+          /> 
+        </div>
+
+        
+
+        
+
+
+
+
       </form>
     </div>
   );
