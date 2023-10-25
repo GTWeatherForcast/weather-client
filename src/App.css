@@ -41,6 +41,7 @@
 
 
 /* Global (shared) styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
@@ -48,25 +49,40 @@
   text-decoration: none;
   color: var(--Contrast-Background, #FFF);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.signupForm * {
-  display: block;
+
+
+.cardRoot {
+  padding: 20px 12%;
+  font-family: Raleway, sans-serif;
+}
+
+.cardRoot h1, h2, h3, h4, h5 {
+  font-weight: 800;
+}
+
+.signupForm {
+  width: 100%;
+  font-family: Raleway, sans-serif;
+  margin-top: 2rem;
 }
 
 .signupForm label {
   font-family: Raleway;
   font-weight: 400;
   margin-top: 10px;
+  display: block;
 }
 
 .signupForm input {
-  font-family: Raleway;
   font-weight: 400;
+  display: block;
+  width: 100%;
 }
 
 .signupForm input[type="text"], input[type="password"] {
@@ -82,5 +98,6 @@
   padding: 15px 50px;
   border: none;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 25%) 0px 2px 2px;;
+  box-shadow: rgba(0, 0, 0, 25%) 0px 2px 2px;
+  margin-top: 10px;
 }
