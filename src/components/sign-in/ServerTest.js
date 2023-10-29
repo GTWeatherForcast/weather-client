@@ -1,7 +1,5 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { LandingCard } from "../landing/Landing";
-import stylesLanding from '../landing/Landing.module.css';
 import styles from "./SignIn.css";
 
 export default function SignInPage() {
