@@ -19,7 +19,7 @@
 }
 
 .searchBar:focus {
-  outline: 1px solid var(--skyblue, #00C2FF);
+  outline: 2px solid var(--skyblue, #00C2FF);
 }
 
 .searchBarDiv {

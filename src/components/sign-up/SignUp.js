@@ -1,6 +1,7 @@
-import styles from './SignUp.css';
+import styles from '../inputs/FormInput.module.css';
 import "../../App.css";
 import { useState } from 'react';
+import FormInput from '../inputs/FormInput';
 
 function SignUpPage() {
   const [username, setUsername] = useState("");
@@ -8,14 +9,16 @@ function SignUpPage() {
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
 
-// TODO: prevent auto form submission until we want to handle this stuff
   return (
     <div className="cardRoot">
       <h2 className="centerText">SIGN UP FOR FREE</h2>
       <p className="centerText">We won't bite, we promise</p>
 
-      <form action="" className="signupForm">
-        <div className="inputDiv">
+      <form action="" className={`${styles.signupForm}`} onSubmit={(e) => { e.preventDefault(); }}>
+        
+        <FormInput id={"test"} label={"test label"} placeholder={"does this thing work?"} type={"text"} startValue={"hey!"}/>
+
+        <div className={`${styles.inputDiv}`}>
           <label for="username">Username</label>
           <input
             id="username"
@@ -23,13 +26,13 @@ function SignUpPage() {
             type="text"
             data-label="Username"
             placeholder=""
-            value={username}
-            onChange={(e) => { setUsername(e.target.value); }}
-            onSubmit={(e) => { e.preventDefault(); }}
+            // value={username}
+            // onChange={(e) => { setUsername(e.target.value); }}
+            // onSubmit={(e) => { e.preventDefault(); }}
           />
         </div>
 
-        <div className="inputDiv">
+        <div className={`${styles.inputDiv}`}>
           <label for="email">Email</label>
           <input
             id="email"
@@ -37,13 +40,13 @@ function SignUpPage() {
             type="text"
             data-label="Email"
             placeholder=""
-            value={email}
-            onChange={(e) => { setEmail(e.target.value); }}
-            onSubmit={(e) => { e.preventDefault(); }}
+            // value={email}
+            // onChange={(e) => { setEmail(e.target.value); }}
+            // onSubmit={(e) => { e.preventDefault(); }}
           />  
         </div>
 
-        <div className="inputDiv">
+        <div className={`${styles.inputDiv}`}>
           <label for="password">Password</label>
           <input
             id="password"
@@ -51,13 +54,13 @@ function SignUpPage() {
             type="password"
             data-label="Password"
             placeholder=""
-            value={password}
-            onChange={(e) => { setPassword(e.target.value); }}
-            onSubmit={(e) => { e.preventDefault(); }}
+            // value={password}
+            // onChange={(e) => { setPassword(e.target.value); }}
+            // onSubmit={(e) => { e.preventDefault(); }}
           /> 
         </div>
 
-        <div className="inputDiv">
+        <div className={`${styles.inputDiv}`}>
           <label for="password2">Confirm Password</label>
           <input
             id="password2"
@@ -65,20 +68,20 @@ function SignUpPage() {
             type="password"
             data-label="Password"
             placeholder=""
-            value={password2}
-            onChange={(e) => { setPassword2(e.target.value); }}
-            onSubmit={(e) => { e.preventDefault(); }}
+            // value={password2}
+            // onChange={(e) => { setPassword2(e.target.value); }}
+            // onSubmit={(e) => { e.preventDefault(); }}
           /> 
         </div>
 
-        <div className="inputDiv submitContainer">
+        <div className={`${styles.inputDiv} ${styles.submitContainer}`}>
           <input
             id="signup"
             className={`${styles.textInput}`}
             type="submit"
             value="Sign Up"
-            onChange={(e) => { e.preventDefault(); }}
-            onSubmit={(e) => { e.preventDefault(); }}
+            // onChange={(e) => { e.preventDefault(); }}
+            // onSubmit={(e) => { e.preventDefault(); }}
           /> 
         </div>
 
