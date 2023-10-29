@@ -71,7 +71,7 @@ function SignUpPage() {
           /> 
         </div>
 
-        <div className="inputDiv">
+        <div className="inputDiv submitContainer">
           <input
             id="signup"
             className={`${styles.textInput}`}
