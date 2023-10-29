@@ -14,21 +14,21 @@ function SignUpPage() {
         
         <FormInput
           type="text"
-          id="username"
+          id="signup-username"
           label="Username"
           placeholder=""
         />
 
         <FormInput
           type="email"
-          id="email"
+          id="signup-email"
           label="Email"
           placeholder=""
         />
 
         <FormInput
           type="password"
-          id="password"
+          id="signup-password"
           label="Password"
           placeholder=""
           title="Password requirements: ?"
@@ -37,7 +37,7 @@ function SignUpPage() {
 
         <FormInput
           type="password"
-          id="password2"
+          id="signup-password2"
           label="Confirm Password"
           placeholder=""
           title="Please reenter your password."

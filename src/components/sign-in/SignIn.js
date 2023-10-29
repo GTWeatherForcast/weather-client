@@ -14,21 +14,21 @@ export default function SignInPage() {
         
         <FormInput
           type="text"
-          id="username"
+          id="login-username"
           label="Username"
           placeholder=""
         />
 
         <FormInput
           type="password"
-          id="password"
+          id="login-password"
           label="Password"
           placeholder=""
         />
 
         <FormInput
           type="submit"
-          id="signup"
+          id="login"
           value="Sign In"
         />
       </form>
