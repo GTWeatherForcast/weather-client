@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    padding: 10px;
     /* Center horizontally */
     justify-content: center;
     /* Center vertically */
@@ -132,6 +133,10 @@
     width: 35%;
     /* width: 500px; */
     right: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .cardLeft {
@@ -140,4 +145,8 @@
     width: 35%;
     /* width: 500px; */
     left: 0px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
