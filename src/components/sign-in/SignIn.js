@@ -2,9 +2,9 @@ import styles from '../inputs/FormInput.module.css';
 import "../../App.css";
 import FormInput from '../inputs/FormInput';
 
-// todo: form submission
+// todo: form submission, clientside and server-side form validation
+
 export default function SignInPage() {
-  // todo: still need to do server-side form validation
   return (
     <div className="cardRoot">
       <h2 className="centerText">LOGIN</h2>
