@@ -17,17 +17,21 @@ export function SubmitButton({ id, value }) {
   );
 }
 
-export default function FormInput({ type, id, label, placeholder, startValue, onChange }) {
+/** Custom-styled wrapper for an HTML input tag.
+ * @param {String} id 
+ * @param {String} type 
+ * @param {String} label Optional
+ * @param {...*} ...props Any attributes to be passed to the input tag */
+export default function FormInput({ id, type, label, ...props }) {
+  // const [value, setValue] = useState(startValue);
   return (
-    <div className={`${styles.inputDiv} ${styles.submitContainer}`}>
+    <div className={`${styles.inputDiv} ${type === "submit" ? styles.submitContainer : null}`}>
       {label !== null || label !== undefined ? <label for={id}>{label}</label> : <></>}
       <input
-        className={`${styles.input}`}
         id={id}
         type={type}
-        value={startValue}
-        placeholder={placeholder}
-        onChange={onChange}
+        className={`${styles.input}`}
+        {...props}
       />
     </div>
   );
