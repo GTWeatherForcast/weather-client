@@ -20,8 +20,8 @@ function SignUpPage() {
       <p className="centerText">We won't bite, we promise</p>
 
       {/* This line was meant to be used with the commented-out function header */}
-      {/* <form action="" className={`${styles.signupForm}`} onSubmit={(e) => { onSubmit(e) }}> */}
-      <form action="" className={`${styles.signupForm}`} onSubmit={(e) => { e.preventDefault() }}>
+      {/* <form action="" className={`${styles.mainForm}`} onSubmit={(e) => { onSubmit(e) }}> */}
+      <form action="" className={`${styles.mainForm}`} onSubmit={(e) => { e.preventDefault() }}>
         
         <FormInput
           type="text"
