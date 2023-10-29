@@ -1,21 +1,5 @@
 import styles from "./FormInput.module.css";
 import "../../App.css";
-import { useState } from 'react';
-
-export function SubmitButton({ id, value }) {
-  return (
-    <div className={`${styles.inputDiv} ${styles.submitContainer}`}>
-      <input
-        id="signup"
-        className={`${styles.textInput}`}
-        type="submit"
-        value="Sign Up"
-        // onChange={(e) => { e.preventDefault(); }}
-        // onSubmit={(e) => { e.preventDefault(); }}
-      />
-    </div>
-  );
-}
 
 /** Custom-styled wrapper for an HTML input tag.
  * @param {String} id 
