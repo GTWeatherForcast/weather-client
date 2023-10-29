@@ -15,7 +15,11 @@
 }
 
 .searchBar::placeholder {
-  color: #A3A3A3;
+  /* color: #A3A3A3; */
+  color: gray;
+  opacity: 100%;
+  /* color: black; */
+  /* opacity: 40%; */
 }
 
 .searchBar:focus {
