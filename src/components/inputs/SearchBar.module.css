@@ -4,26 +4,30 @@
   font-family: Raleway;
   padding: 15px;
   border-radius: 20px;
-  border: 0;
-  box-shadow: inset rgba(0, 0, 0, 25%) 2px 2px 2px;
+  border: 2px solid #FFFFFFA0;
+  /* box-shadow: inset rgba(0, 0, 0, 25%) 2px 2px 2px; */
+  /* border: none; */
   text-align: center;
   font-size: 1em;
   font-weight: 600;
   /* width: 512px; */
   width: 100%;
+  /* background-color: rgba(255, 255, 255, 30%) */
   background-color: rgba(255, 255, 255, 30%)
 }
 
 .searchBar::placeholder {
   /* color: #A3A3A3; */
-  color: gray;
+  /* color: gray; */
   opacity: 100%;
   /* color: black; */
   /* opacity: 40%; */
 }
 
 .searchBar:focus {
-  outline: 2px solid var(--skyblue, #00C2FF);
+  /* outline: 2px solid var(--skyblue, #00C2FF); */
+  outline: none;
+  border-color: var(--skyblue);
 }
 
 .searchBarDiv {
