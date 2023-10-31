@@ -1,7 +1,8 @@
-// import styles from './SignUp.css';
-import { useState } from "react"
-import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import styles from '../inputs/FormInput.module.css';
+import "../../App.css";
+import FormInput from '../inputs/FormInput';
+
+// todo: form submission, clientside and server-side form validation
 
 function SignUpPage() {
 
@@ -55,44 +56,49 @@ function SignUpPage() {
   }
 
   return (
-    <div>
-      <form className="signup" onSubmit={handleSubmit}>
-      <h3>Sign Up</h3>
+    <div className="cardRoot">
+      <h2 className="centerText">SIGN UP FOR FREE</h2>
+      <p className="centerText">We won't bite, we promise</p>
 
-      <label>username:</label>
-      <input 
-        type="username" 
-        onChange={(e) => setUsername(e.target.value)} 
-        value={username} 
-      />
-      
-      <label>email address:</label>
-      <input 
-        type="email" 
-        onChange={(e) => setEmail(e.target.value)} 
-        value={email} 
-      />
+      <form action="" className={`${styles.mainForm}`} onSubmit={(e) => { e.preventDefault() }}>
+        
+        <FormInput
+          type="text"
+          id="signup-username"
+          label="Username"
+          placeholder=""
+        />
 
-      <label>Password:</label>
-      <input 
-        type="password" 
-        onChange={(e) => setPassword(e.target.value)} 
-        value={password} 
-      />
+        <FormInput
+          type="email"
+          id="signup-email"
+          label="Email"
+          placeholder=""
+        />
 
-      <label>Confirm Password:</label>
-      <input 
-        type="password" 
-        onChange={(e) => confirmPassword(e.target.value)} 
-        value={passwordtwo} 
-      />
+        <FormInput
+          type="password"
+          id="signup-password"
+          label="Password"
+          placeholder=""
+          title="Password requirements: ?"
 
-      {/* <button onClick={signUpButton}>Sign up</button> */}
-      <button>Sign up</button>
+        />
+
+        <FormInput
+          type="password"
+          id="signup-password2"
+          label="Confirm Password"
+          placeholder=""
+          title="Please reenter your password."
+        />
+
+        <FormInput
+          type="submit"
+          id="signup"
+          value="Sign Up"
+        />
       </form>
-      <p>
-        <button onClick = {signUpButton}>Back PLS</button>
-      </p>
     </div>
 
   );

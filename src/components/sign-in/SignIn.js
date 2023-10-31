@@ -1,33 +1,37 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import styles from './SignIn.css';
+import styles from '../inputs/FormInput.module.css';
+import "../../App.css";
+import FormInput from '../inputs/FormInput';
 
-function SignInPage() {
-  const [messageFromServer, setMessageFromServer] = useState(undefined);
+// todo: form submission, clientside and server-side form validation
 
-  useEffect(() => {
-    // dummy example of how to make a request to our server
-    // note: make sure the server is running on your machine
-    const API_URL = 'http://localhost:8080';
-    axios.get(API_URL).then((response) => {
-      const serverMessage = response?.data?.message || 'no message from server';
-      setMessageFromServer(`Got this message from our server: ${serverMessage}`);
-    }).catch((error) => {
-      setMessageFromServer('Error communicating with server');
-      console.error('Error communicating with server', error);
-    });
-  }, []);
-
+export default function SignInPage() {
   return (
-    <div>
-        <p className={styles.dummyStyle}>Sign in page</p>
-        <p>{messageFromServer || 'communicating with server...'}</p>
-        <a href='/'>Back</a>
-        <p>
-        <a href='sign-up'>Sign Up!</a>
-        </p>
+    <div className="cardRoot">
+      <h2 className="centerText">LOGIN</h2>
+      <p className="centerText">Welcome back!</p>
+
+      <form action="" className={`${styles.mainForm}`} onSubmit={(e) => { e.preventDefault() }}>
+        
+        <FormInput
+          type="text"
+          id="login-username"
+          label="Username"
+          placeholder=""
+        />
+
+        <FormInput
+          type="password"
+          id="login-password"
+          label="Password"
+          placeholder=""
+        />
+
+        <FormInput
+          type="submit"
+          id="login"
+          value="Sign In"
+        />
+      </form>
     </div>
   );
 }
-
-export default SignInPage;
