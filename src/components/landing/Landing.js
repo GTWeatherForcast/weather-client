@@ -44,8 +44,8 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
             <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={returnToLanding}>gt forecast</button></li>
           </ol>
           <ol>
-            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignIn}>sign in</button></li>
-            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignUp}>sign up</button></li>
+            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignIn}>SIGN IN</button></li>
+            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignUp}>SIGN UP</button></li>
           </ol>
         </nav>
       </div>
