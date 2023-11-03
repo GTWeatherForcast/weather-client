@@ -5,13 +5,12 @@
     padding: 15px;
     border-radius: 20px;
     border: 0;
-    box-shadow:  inset rgba(0, 0, 0, 25%) 2px 2px 2px;
+    box-shadow: inset rgba(0, 0, 0, 25%) 2px 2px 2px;
     text-align: center;
     font-size: 1em;
     font-weight: 600;
     width: 512px;
     background-color: rgba(255, 255, 255, 30%)
-
 }
 
 .searchBar::placeholder {
