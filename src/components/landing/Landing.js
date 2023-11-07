@@ -1,5 +1,5 @@
 import styles from "./Landing.module.css";
-import { LocationSearch } from "../inputs/SearchBar"
+import { LocationSearch } from "../inputs/SearchBar";
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
@@ -48,17 +48,41 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
         <nav className={`${styles.mainNav}`}>
           <ol>
             {/* <li><Link to="/">gt forecast</Link></li> */}
-            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={returnToLanding}>gt forecast</button></li>
+            <li>
+              <button
+                className={`${styles.fakeLink} ${styles.textStyle}`}
+                onClick={returnToLanding}
+              >
+                gt forecast
+              </button>
+            </li>
           </ol>
           <ol>
-            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignIn}>sign in</button></li>
-            <li><button className={`${styles.fakeLink} ${styles.textStyle}`} onClick={toggleSignUp}>sign up</button></li>
+            <li>
+              <button
+                className={`${styles.fakeLink} ${styles.textStyle}`}
+                onClick={toggleSignIn}
+              >
+                sign in
+              </button>
+            </li>
+            <li>
+              <button
+                className={`${styles.fakeLink} ${styles.textStyle}`}
+                onClick={toggleSignUp}
+              >
+                sign up
+              </button>
+            </li>
           </ol>
         </nav>
       </div>
 
       <div id={styles["content-container"]}>
-        <p id={styles["welcome"]} className={`${styles.center} ${styles.textStyle}`}>
+        <p
+          id={styles["welcome"]}
+          className={`${styles.center} ${styles.textStyle}`}
+        >
           Welcome to Georgia Tech Weather Forecast!
         </p>
         <div id={styles["rectangle"]}></div>
