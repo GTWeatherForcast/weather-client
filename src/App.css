@@ -1,3 +1,5 @@
+/* create react app defaults */
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,45 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Global (shared) styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+  --skyblue: #00C2FF;
+}
+
+.textStyle {
+  text-decoration: none;
+  color: var(--Contrast-Background, #FFF);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+
+
+.cardRoot {
+  padding: 20px 12%;
+  font-family: Raleway, sans-serif;
+  font-size: 1rem;
+}
+
+.cardRoot h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  margin: 0 0 0 0;
+}
+
+.cardRoot p {
+  margin: 0 0 0 0;
+}
+
+.centerText {
+  text-align: center;
 }
