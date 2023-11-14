@@ -43,7 +43,7 @@ input[type="email"] {
 .inputDiv input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus {
-  border-color: var(--skyblue, #00C2FF);
+  border-color: var(--skyblue);
 }
 
 .submitContainer {
