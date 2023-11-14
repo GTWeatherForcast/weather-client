@@ -18,7 +18,7 @@ function MainPage() {
             <img className="image" src={sunny1} alt="sunny image" />
           </div>
           <div id="hourlyTemp" className="rectangle1 dropShadow">
-            <div>hourly temp</div>
+            <div className="rectangle-line"></div>
           </div>
         </div>
 
