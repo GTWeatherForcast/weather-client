@@ -5,6 +5,8 @@ import ComponentTestPage from "./components/demo/ComponentTest";
 import ErrorPage from "./components/error-pages/ErrorPage";
 import MainPage from "./components/main-page/MainPage";
 
+// import "./App.css"
+
 const router = createBrowserRouter([
   {
     path: "/",

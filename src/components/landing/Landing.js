@@ -1,8 +1,10 @@
+
 import styles from "./Landing.module.css";
 import { LocationSearch } from "../inputs/SearchBar";
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
+// import "../../App.css";
 
 // 0 = left card
 // 1 = no card
@@ -50,7 +52,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
             {/* <li><Link to="/">gt forecast</Link></li> */}
             <li>
               <button
-                className={`${styles.fakeLink} ${styles.textStyle}`}
+                className={`${styles.fakeLink} textStyle`}
                 onClick={returnToLanding}
               >
                 gt forecast
@@ -60,7 +62,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
           <ol>
             <li>
               <button
-                className={`${styles.fakeLink} ${styles.textStyle}`}
+                className={`${styles.fakeLink} textStyle`}
                 onClick={toggleSignIn}
               >
                 sign in
@@ -68,7 +70,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
             </li>
             <li>
               <button
-                className={`${styles.fakeLink} ${styles.textStyle}`}
+                className={`${styles.fakeLink} textStyle`}
                 onClick={toggleSignUp}
               >
                 sign up
@@ -81,7 +83,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       <div id={styles["content-container"]}>
         <p
           id={styles["welcome"]}
-          className={`${styles.center} ${styles.textStyle}`}
+          className={`${styles.center} textStyle`}
         >
           Welcome to Georgia Tech Weather Forecast!
         </p>
