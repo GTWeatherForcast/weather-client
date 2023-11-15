@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./main.css";
+import styles from "./main.module.css";
 import sunny1 from "./images/sunny1.png";
 
 function MainPage() {
@@ -41,7 +41,7 @@ function MainPage() {
       {/* 10 day : max/min temp, weather icon, short summary */}
       <br />
       <div className="center">
-        <div id="10day" className="rectangle dropShadow">
+        <div id="10day" className={`${styles.rectangle} dropShadow`}>
           <div>10 day summary</div>
         </div>
       </div>
