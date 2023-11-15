@@ -1,32 +1,43 @@
 import React from "react";
-import styles from "./main.css";
+import styles from "./main.module.css";
 import sunny1 from "./images/sunny1.png";
+import Navbar from "./navbar.js";
 
 function MainPage() {
   return (
-    <div className="mainBody textStyle">
+    <div className={`${styles.mainBody} ${styles.textStyle}`}>
+      {/* navbar */}
+      <Navbar />
+
       {/* today : max/min temp, city, temperature */}
-      <div id="today">
-        <div className="center">
+      <div id={styles.today}>
+        <div className={styles.center}>
           {/* TODO : make image random */}
-          <div id="cityImage" className="city-rectangle dropShadow">
-            <div className="overlay-text">
-              <div id="maxMinTemp"> max/min temp </div>
-              <div id="currentTemp"> current temp </div>
-              <div id="cityName"> city name </div>
+          <div
+            id={styles.cityImage}
+            className={`${styles["city-rectangle"]} ${styles.dropShadow}`}
+          >
+            <div className={styles["overlay-text"]}>
+              <div id={styles.maxMinTemp}> max/min temp </div>
+              <div id={styles.currentTemp}> current temp </div>
+              <div id={styles.cityName}> city name </div>
             </div>
-            <img className="image" src={sunny1} alt="sunny image" />
+            <img className={styles.image} src={sunny1} alt="sunny image" />
           </div>
-          <div id="hourlyTemp" className="rectangle1 dropShadow">
-            <div className="rectangle-line"></div>
-          </div>
+          <div
+            id={styles.hourlyTemp}
+            className={`${styles.rectangle1} ${styles.dropShadow}`}
+          ></div>
         </div>
 
         {/* add hourly info  */}
         <br />
 
-        <div className="center">
-          <div id="information" className="info-rectangle dropShadow">
+        <div className={styles.center}>
+          <div
+            id={styles.information}
+            className={`${styles["info-rectangle"]} ${styles.dropShadow}`}
+          >
             <div>
               information : humidity, air quality, uv index, precipitation
             </div>
@@ -40,8 +51,11 @@ function MainPage() {
 
       {/* 10 day : max/min temp, weather icon, short summary */}
       <br />
-      <div className="center">
-        <div id="10day" className="rectangle dropShadow">
+      <div className={styles.center}>
+        <div
+          id={styles["10day"]}
+          className={`${styles.rectangle} ${styles.dropShadow}`}
+        >
           <div>10 day summary</div>
         </div>
       </div>
