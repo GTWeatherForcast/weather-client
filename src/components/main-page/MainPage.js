@@ -7,7 +7,9 @@ function MainPage() {
   return (
     <div className={`${styles.mainBody} ${styles.textStyle}`}>
       {/* navbar */}
-      <Navbar />
+      <div className={styles.navBar}>
+        <Navbar />
+      </div>
 
       {/* today : max/min temp, city, temperature */}
       <div id={styles.today}>

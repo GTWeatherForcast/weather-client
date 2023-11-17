@@ -1,4 +1,3 @@
-
 import styles from "./Landing.module.css";
 import { LocationSearch } from "../inputs/SearchBar";
 import SignInPage from "../sign-in/SignIn";
@@ -81,10 +80,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       </div>
 
       <div id={styles["content-container"]}>
-        <p
-          id={styles["welcome"]}
-          className={`${styles.center} textStyle`}
-        >
+        <p id={styles["welcome"]} className={`${styles.center} textStyle`}>
           Welcome to Georgia Tech Weather Forecast!
         </p>
         <div id={styles["rectangle"]}></div>

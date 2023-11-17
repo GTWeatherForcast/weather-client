@@ -6,9 +6,11 @@ function navbar() {
   return (
     <nav className={`${styles.navbar}`}>
       <div>
-        <button className={`${styles.textStyle}`}>gt forecast</button>
+        <button className={`${styles.textStyle} ${styles.logo}`}>
+          gt forecast
+        </button>
       </div>
-      <div className={styles.center}>
+      <div className={`${styles.center} ${styles.searchBar} `}>
         <LocationSearch />
       </div>
     </nav>

@@ -100,7 +100,7 @@
 .textStyle {
     z-index: 99;
     font-weight: 50;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-family: Montserrat;
     font-size: 20px;
@@ -115,4 +115,14 @@
 
 .dropShadow {
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    /* Adjust z-index to ensure it stays on top of other elements */
 }
