@@ -3,7 +3,6 @@ import { LocationSearch } from "../inputs/SearchBar";
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
-// import "../../App.css";
 
 // 0 = left card
 // 1 = no card

@@ -1,5 +1,4 @@
 import styles from "./FormInput.module.css";
-import "../../App.css";
 
 /** Custom-styled wrapper for an HTML input tag.
  * @param {String} id 
