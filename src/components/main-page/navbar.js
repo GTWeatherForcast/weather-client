@@ -6,7 +6,7 @@ function navbar() {
   return (
     <nav className={`${styles.navbar}`}>
       <div>
-        <button className={`${styles.textStyle} ${styles.logo}`}>
+        <button className={`textStyle ${styles.logo}`}>
           gt forecast
         </button>
       </div>

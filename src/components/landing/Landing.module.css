@@ -51,10 +51,6 @@
 /** NAVIGATION */
 
 /* MAIN NAVBAR */
-.landingNav {
-    position: relative;
-}
-
 .mainNav {
     position: absolute;
     width: 100%;

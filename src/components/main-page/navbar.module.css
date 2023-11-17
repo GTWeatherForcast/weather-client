@@ -22,6 +22,7 @@
   /* To push the children to opposite ends horizontally */
   align-items: center;
   /* To center the children vertically */
+  position: sticky;
 }
 
 .logo {

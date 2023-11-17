@@ -9,7 +9,7 @@ export default function FormInput({ id, type, label, ...props }) {
   // const [value, setValue] = useState(startValue);
   return (
     <div className={`${styles.inputDiv} ${type === "submit" ? styles.submitContainer : null}`}>
-      {label !== null || label !== undefined ? <label for={id}>{label}</label> : <></>}
+      {label !== null || label !== undefined ? <label htmlFor={id}>{label}</label> : <></>}
       <input
         id={id}
         type={type}

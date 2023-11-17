@@ -10,8 +10,7 @@ import { useState } from "react";
 export function LandingCard({ setCardIndex, cardIndex = 1 }) {
   function returnToLanding() {
     setCardIndex(1);
-    window.history.replaceState(null, "", "..");
-    // todo: modify URL to have / without updating page
+    window.history.replaceState(null, "", "/");
   }
 
   function toggleSignUp() {
@@ -20,7 +19,6 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
     } else {
       setCardIndex(2);
       window.history.replaceState(null, "", "signup");
-      // todo: modify URL to have /login without updating page
     }
   }
 
@@ -30,7 +28,6 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
     } else {
       setCardIndex(0);
       window.history.replaceState(null, "", "login");
-      // todo: modify URL to have /signup without updating page
     }
   }
 
@@ -44,39 +41,36 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
           : ""
       }`}
     >
-      <div className={styles.landingNav}>
-        <nav className={`${styles.mainNav}`}>
-          <ol>
-            {/* <li><Link to="/">gt forecast</Link></li> */}
-            <li>
-              <button
-                className={`${styles.fakeLink} textStyle`}
-                onClick={returnToLanding}
-              >
-                gt forecast
-              </button>
-            </li>
-          </ol>
-          <ol>
-            <li>
-              <button
-                className={`${styles.fakeLink} textStyle`}
-                onClick={toggleSignIn}
-              >
-                sign in
-              </button>
-            </li>
-            <li>
-              <button
-                className={`${styles.fakeLink} textStyle`}
-                onClick={toggleSignUp}
-              >
-                sign up
-              </button>
-            </li>
-          </ol>
-        </nav>
-      </div>
+      <nav className={`${styles.mainNav}`}>
+        <ol>
+          <li>
+            <button
+              className={`${styles.fakeLink} textStyle`}
+              onClick={returnToLanding}
+            >
+              gt forecast
+            </button>
+          </li>
+        </ol>
+        <ol>
+          <li>
+            <button
+              className={`${styles.fakeLink} textStyle`}
+              onClick={toggleSignIn}
+            >
+              sign in
+            </button>
+          </li>
+          <li>
+            <button
+              className={`${styles.fakeLink} textStyle`}
+              onClick={toggleSignUp}
+            >
+              sign up
+            </button>
+          </li>
+        </ol>
+      </nav>
 
       <div id={styles["content-container"]}>
         <p id={styles["welcome"]} className={`${styles.center} textStyle`}>
@@ -85,7 +79,6 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
         <div id={styles["rectangle"]}></div>
         <LocationSearch />
       </div>
-      {/* todo: change classes to reflect whether it is signup or login page so we can move stuff around */}
     </div>
   );
 }
