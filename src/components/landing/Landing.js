@@ -3,6 +3,7 @@ import { LocationSearch } from "../inputs/SearchBar";
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // 0 = left card
 // 1 = no card
@@ -10,7 +11,7 @@ import { useState } from "react";
 export function LandingCard({ setCardIndex, cardIndex = 1 }) {
   function returnToLanding() {
     setCardIndex(1);
-    window.history.replaceState(null, "", "/");
+    // window.history.replaceState(null, "", "..");
   }
 
   function toggleSignUp() {
@@ -18,7 +19,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       returnToLanding();
     } else {
       setCardIndex(2);
-      window.history.replaceState(null, "", "signup");
+      // window.history.replaceState(null, "", "signup");
     }
   }
 
@@ -27,7 +28,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       returnToLanding();
     } else {
       setCardIndex(0);
-      window.history.replaceState(null, "", "login");
+      // window.history.replaceState(null, "", "login");
     }
   }
 
@@ -41,36 +42,44 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
           : ""
       }`}
     >
-      <nav className={`${styles.mainNav}`}>
-        <ol>
-          <li>
-            <button
-              className={`${styles.fakeLink} textStyle`}
-              onClick={returnToLanding}
-            >
-              gt forecast
-            </button>
-          </li>
-        </ol>
-        <ol>
-          <li>
-            <button
-              className={`${styles.fakeLink} textStyle`}
-              onClick={toggleSignIn}
-            >
-              sign in
-            </button>
-          </li>
-          <li>
-            <button
-              className={`${styles.fakeLink} textStyle`}
-              onClick={toggleSignUp}
-            >
-              sign up
-            </button>
-          </li>
-        </ol>
-      </nav>
+      <div className={styles.landingNav}>
+        <nav className={`${styles.mainNav}`}>
+          <ol>
+            <li>
+              <Link
+                to={"/"}
+                replace={true}
+                className={`${styles.fakeLink} textStyle`}
+                onClick={returnToLanding}
+              >
+                gt forecast
+              </Link>
+            </li>
+          </ol>
+          <ol>
+            <li>
+              <Link
+                to={"/login"}
+                replace={true}
+                className={`${styles.fakeLink} textStyle`}
+                onClick={toggleSignIn}
+              >
+                sign in
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/signup"} 
+                replace={true}
+                className={`${styles.fakeLink} textStyle`}
+                onClick={toggleSignUp}
+              >
+                sign up
+              </Link>
+            </li>
+          </ol>
+        </nav>
+      </div>
 
       <div id={styles["content-container"]}>
         <p id={styles["welcome"]} className={`${styles.center} textStyle`}>
