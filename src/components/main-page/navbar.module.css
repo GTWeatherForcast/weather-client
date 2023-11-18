@@ -35,10 +35,6 @@
   padding: 0;
 }
 
-.searchBar {
-  padding: 20px;
-}
-
 /** NAVIGATION */
 
 /* MAIN NAVBAR */
@@ -54,31 +50,27 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  padding: 0px 20px;
+  background-color: #ffffff10;
 }
 
-.mainNav ol {
-  list-style: none;
-  padding: 0;
+.navGroup {
   display: flex;
-  margin: 25px 20px;
+  align-self: center;
+  flex: 1;
 }
 
-.mainNav li {
-  margin: 0 20px 0 20px;
-  /* display: inline; */
-}
-
-.mainNav Link, a {
-  color: inherit;
-  text-decoration: inherit;
+#search {
+  flex: 2;
 }
 
 .fakeLink {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  /* text-decoration: underline; */
+  color: inherit;
+  text-decoration: inherit;
   display: inline;
-  margin: 0;
-  padding: 0;
+  margin: 25px 20px;
+  /* padding: 0; */
 }

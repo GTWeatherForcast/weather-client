@@ -126,6 +126,4 @@
     align-items: center;
     position: fixed;
     top: 0;
-    /* z-index: 100; */
-    /* Adjust z-index to ensure it stays on top of other elements */
 }

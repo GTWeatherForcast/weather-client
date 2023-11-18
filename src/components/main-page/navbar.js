@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./navbar.module.css";
 import { LocationSearch } from "../inputs/SearchBar";
-// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -9,31 +8,37 @@ function NavBar() {
   return (
     <div className={styles.landingNav}>
       <nav className={`${styles.mainNav}`}>
-        <ol>
-          <li>
-            <Link to={"/"} className={`${styles.fakeLink} textStyle`}>
+        <div className={`${styles.navGroup} flexLeft`}>
+          <Link
+              to={"/"}
+              // replace={true}
+              className={`${styles.fakeLink} textStyle`}
+              // onClick={returnToLanding}
+            >
               gt forecast
             </Link>
-          </li>
-        </ol>
-        <ol>
-          <li>
-            <button
-              className={`${styles.fakeLink} textStyle`}
-              // onClick={toggleSignIn}
-            >
-              sign in
-            </button>
-          </li>
-          <li>
-            <button
-              className={`${styles.fakeLink} textStyle`}
-              // onClick={toggleSignUp}
-            >
-              sign up
-            </button>
-          </li>
-        </ol>
+          </div>
+        <div id={ styles.search } className={`${styles.navGroup} flexCenter`}>
+          <LocationSearch />
+        </div> 
+        <div className={`${styles.navGroup} flexRight`}>
+          <Link
+            to={"/login"}
+            // replace={true}
+            className={`${styles.fakeLink} textStyle`}
+            // onClick={toggleSignIn}
+          >
+            sign in
+          </Link>
+          <Link
+            to={"/signup"} 
+            // replace={true}
+            className={`${styles.fakeLink} textStyle`}
+            // onClick={toggleSignUp}
+          >
+            sign up
+          </Link>
+        </div>
       </nav>
     </div>
   );

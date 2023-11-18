@@ -79,3 +79,15 @@
 .centerText {
   text-align: center;
 }
+
+.flexLeft {
+  justify-content: left;
+}
+
+.flexRight {
+  justify-content: right;
+}
+
+.flexCenter {
+  justify-content: center;
+}
