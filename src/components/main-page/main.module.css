@@ -84,23 +84,38 @@
 
 .detailedInfo {
     display: flex;
-    height: 200px;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    height: 250px;
 }
 
 .detailCard {
-    
+    margin-top: 22px;
+    margin-bottom: 22px;
+    width: 100%;
+    text-align: center;
+}
+
+.detailCard h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 0.75em;
+    position: relative;
+    margin: 0;
+    top: -12px;
 }
 
 #detailHumid {
-
+    border-right: 1px solid #4D4D4D;
 }
 
 #detailAQ {
-
+    border-right: 1px solid #4D4D4D;
 }
 
 #detailUV {
-
+    border-right: 1px solid #4D4D4D;
 }
 
 #detailPrecip {
@@ -108,7 +123,7 @@
 }
 
 .hourlyForecast {
-    width: 300px;
+    width: 400px;
 }
 
 .tenDayForecast {
@@ -155,7 +170,7 @@
 #currentLocation{
     position: relative;
     font-family: Raleway, sans-serif;
-    font-weight: medium;
+    font-weight: 400;
     font-size: 2em;
     top: -0.5em;
     left: -0.6rem;

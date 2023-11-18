@@ -33,19 +33,19 @@ function MainPage() {
             <div className={`${styles.detailedInfo} ${styles.card}`}>
 
               <div id={styles.detailHumid} className={`${styles.detailCard}`}>
-                HUMIDITY
+                <h1>HUMIDITY</h1>
               </div>
 
               <div id={styles.detailAQ} className={`${styles.detailCard}`}>
-                AIR QUALITY
+                <h1>AIR QUALITY</h1>
               </div>
 
               <div id={styles.detailUV} className={`${styles.detailCard}`}>
-                UV INDEX
+                <h1>UV INDEX</h1>
               </div>
 
               <div id={styles.detailPrecip} className={`${styles.detailCard}`}>
-                PRECIPITATION
+                <h1>PRECIPITATION</h1>
               </div>
             </div>
           </div>
