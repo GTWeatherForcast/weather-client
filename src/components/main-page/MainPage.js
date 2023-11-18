@@ -3,6 +3,7 @@ import styles from "./main.module.css";
 import styles2 from "./cityimg.module.css";
 import NavBar from "./navbar.js";
 import HorizontalLine from "./HorizontalLine.js";
+import RangeSlider from "./RangeSlider.js";
 
 function MainPage() {
   return (
@@ -40,9 +41,10 @@ function MainPage() {
 
               <div id={styles.detailAQ} className={`${styles.detailCard}`}>
                 <h1>AIR QUALITY</h1>
-                <div className={styles.detailData}>40</div>
+                <p className={styles.detailData}>40</p>
                 <div>
                   <p className={styles.detailSubtitle}>Good</p>
+                  <RangeSlider/>
                 </div>
               </div>
 
@@ -51,6 +53,7 @@ function MainPage() {
                 <p className={styles.detailData}>5</p>
                 <div>
                   <p className={styles.detailSubtitle}>Moderate</p>
+                  <RangeSlider/>
                 </div>
               </div>
 
