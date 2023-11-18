@@ -6,13 +6,36 @@ import NavBar from "./navbar.js";
 function MainPage() {
   return (
     <div className={`${styles.mainBody}`}>
-      <NavBar />
+      <div className={styles.mainNavDiv}>
+        <NavBar />
+      </div>
+
+      <div id={styles.today}>
+        <div id={styles.cityImage} className={`${styles["city-rectangle"]} ${styles.dropShadow}`}>
+        {/* <div id={``} className={`${styles.dropShadow}`}> */}
+           <div className={styles["overlay-text"]}>
+             <div id={styles.maxMinTemp}> max/min temp </div>
+             <div id={styles.currentTemp}> current temp </div>
+             <div id={styles.cityName}> city name </div>
+           </div>
+           <img className={styles.image} src={sunny1} alt="sunny image" />
+        </div>
+
+        <div id={styles.hourlyTemp} className={`${styles.rectangle1} ${styles.dropShadow}`}>
+        </div>
+      </div>
+
+      <div id={styles.future}>
+
+      </div>
+
+
     </div>
   );
   // return (
   //   <div className={`${styles.mainBody} ${styles.textStyle}`}>
   //     {/* navbar */}
-  //     <Navbar />
+  //     <NavBar />
 
   //     {/* today : max/min temp, city, temperature */}
   //     <div id={styles.today}>

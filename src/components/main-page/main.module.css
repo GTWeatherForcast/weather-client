@@ -5,6 +5,12 @@
 } */
 /* NEVER APPLY to * UNLESS YOU ABSOLUTELY WANT TO APPLY THIS STYLE TO EVERYTHING */
 
+.mainNavDiv {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 .mainBody {
     overflow: scroll;
     background-color: #17A4D0;
@@ -37,7 +43,7 @@
     left: 10px;
     color: white;
     padding: 5px;
-    /* z-index: 99; */
+    z-index: 1;
 }
 
 .image {
@@ -70,7 +76,7 @@
     border: 777777;
 }
 
-.city-rectangle {
+.cityRectangle {
     width: 700px;
     height: 400px;
     background-color: #ffffff;
@@ -118,12 +124,4 @@
 
 .dropShadow {
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-.navbar {
-    display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    position: fixed;
-    top: 0;
 }
