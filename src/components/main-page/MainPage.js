@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./main.module.css";
 import sunny1 from "./images/sunny1.png";
 import Navbar from "./navbar.js";
+import HorizontalLine from "./HorizontalLine.js";
 
 function MainPage() {
   return (
@@ -58,7 +59,29 @@ function MainPage() {
           id={styles["10day"]}
           className={`${styles.rectangle} ${styles.dropShadow}`}
         >
-          <div>10 day summary</div>
+          <div className={styles.textContainer}>
+            <div className={styles.tenDayTitle}>10 DAY FORECAST</div>
+
+            <div className={styles.linesContainer}>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+              <div className={styles.margin}></div>
+              <HorizontalLine />
+            </div>
+          </div>
         </div>
       </div>
     </div>
