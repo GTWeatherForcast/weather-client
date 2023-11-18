@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./main.module.css";
 import sunny1 from "./images/sunny1.png";
 import NavBar from "./navbar.js";
-import HorizontalLine from "./HorizontalLine.js";
 
 function MainPage() {
   return (
