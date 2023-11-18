@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./main.module.css";
+import styles2 from "./cityimg.module.css";
 import NavBar from "./navbar.js";
 import HorizontalLine from "./HorizontalLine.js";
 
@@ -13,7 +14,10 @@ function MainPage() {
       <div className={styles.contentBody}>
         <div className={styles.today}>
           <div className={styles.leftCard}>
-            <div className={`${styles.cityImg} ${styles.card} ${styles.weatherSunny}`}>
+            <div className={`${styles.mainInfo} ${styles.card} ${styles2.weatherSunny}`}>
+              <div className={`${styles2.cityImg}`}>
+
+              </div>
               <div className={`${styles.overlayText}`}>
                 <div id={`${styles.todayHighLow}`}>
                   97°F/89°F

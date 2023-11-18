@@ -1,0 +1,77 @@
+.cityImg, .cityImg:before {
+  position: absolute;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* Weather img cards */
+.weatherSunny {
+  background-position: center;
+  background-color: #537ab0;
+  opacity: 1;
+  /* background-image: url("./images/sunny1.png"); */
+}
+
+.weatherSunny .cityImg {
+  /* content: ""; */
+  /* background-position: center; */
+  /* background-color: #537ab0; */
+  opacity: 0.8;
+  background-image: url("./images/sunny1.png");
+}
+
+.weatherClearNight {
+
+}
+
+.weatherCloudy {
+  background-image: url("./images/cloud.png");
+}
+
+.weatherCloudyNight {
+  background-image: url("./images/cloud.png");
+}
+
+.weatherPartlyCloudy {
+  
+}
+
+.weatherPartlyCloudyNight {
+  
+}
+
+.weatherRain {
+  background-image: url("./images/rain.png");
+}
+
+.weatherRainNight {
+  background-image: url("./images/rain.png");
+}
+
+.weatherSnow {
+  background-image: url("./images/snow.png");
+}
+
+.weatherSnowNight {
+  background-image: url("./images/snow.png");
+}
+
+.weatherThunderstorm {
+  
+}
+
+.weatherThunderstormNight {
+  
+}
+
+.weatherHail {
+  
+}
+
+.weatherHailNight {
+  
+}

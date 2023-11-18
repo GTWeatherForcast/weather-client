@@ -57,6 +57,7 @@
     border-radius: 8px;
     margin: 4px;
     box-shadow: rgba(0, 0, 0, 25%) 0px 8px 8px;
+    position: relative;
 }
 
 .today {
@@ -73,11 +74,12 @@
     width: 100%;
 }
 
-.cityImg {
+.mainInfo {
     background-color: white;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    /* position: relative; */
 }
 
 .detailedInfo {
@@ -105,8 +107,10 @@
 }
 
 .overlayText {
+    position: absolute;
+    top: 0;
     /* font-weight: 500; */
-    margin: 2em 3em;
+    margin: 36px 48px;
     color: white;
     text-decoration: none;
     /* font-family: Raleway, sans-serif; */
@@ -118,9 +122,11 @@
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 1em;
+    left: 0.5rem;
 }
 
 #currentTemp{
+    top: 0.25rem;
     position: absolute;
     font-family: Raleway, sans-serif;
     font-weight: 600;
@@ -131,63 +137,7 @@
     position: absolute;
     font-family: Raleway, sans-serif;
     font-weight: medium;
-    font-size: 2em
-}
-
-/* Weather img cards */
-.weatherSunny {
-    background-position: center;
-    background-image: url("./images/sunny1.png");
-}
-
-.weatherClearNight {
-
-}
-
-.weatherCloudy {
-    background-image: url("./images/cloud.png");
-}
-
-.weatherCloudyNight {
-    background-image: url("./images/cloud.png");
-}
-
-.weatherPartlyCloudy {
-    
-}
-
-.weatherPartlyCloudyNight {
-    
-}
-
-.weatherRain {
-    background-image: url("./images/rain.png");
-}
-
-.weatherRainNight {
-    background-image: url("./images/rain.png");
-}
-
-.weatherSnow {
-    background-image: url("./images/snow.png");
-}
-
-.weatherSnowNight {
-    background-image: url("./images/snow.png");
-}
-
-.weatherThunderstorm {
-    
-}
-
-.weatherThunderstormNight {
-    
-}
-
-.weatherHail {
-    
-}
-
-.weatherHailNight {
-    
+    font-size: 2em;
+    top: 2.75em;
+    left: -0.6rem;
 }
