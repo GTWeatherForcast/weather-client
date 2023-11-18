@@ -3,24 +3,22 @@
   border-radius: 8px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
   height: 100%;
   width: 100%;
 }
 
 /* Weather img cards */
+
+/* Use base to set background color in case img fails */
 .weatherSunny {
-  background-position: center;
   background-color: #537ab0;
-  opacity: 1;
-  /* background-image: url("./images/sunny1.png"); */
 }
 
+/* Use .cityImg to actually set the image, as well as additional effects on the img itself (supports opacity) */
 .weatherSunny .cityImg {
-  /* content: ""; */
-  /* background-position: center; */
-  /* background-color: #537ab0; */
   opacity: 0.8;
+  /* filter: brightness(0.95); */
+  background-position: center;
   background-image: url("./images/sunny1.png");
 }
 

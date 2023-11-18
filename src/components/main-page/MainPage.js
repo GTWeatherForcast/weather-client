@@ -14,10 +14,9 @@ function MainPage() {
       <div className={styles.contentBody}>
         <div className={styles.today}>
           <div className={styles.leftCard}>
+            {/* Change styles2.weatherSunny to other weather conditions */}
             <div className={`${styles.mainInfo} ${styles.card} ${styles2.weatherSunny}`}>
-              <div className={`${styles2.cityImg}`}>
-
-              </div>
+              <div className={`${styles2.cityImg}`}></div>
               <div className={`${styles.overlayText}`}>
                 <div id={`${styles.todayHighLow}`}>
                   97°F/89°F
