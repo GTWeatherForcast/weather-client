@@ -13,22 +13,22 @@ function MainPage() {
       <div className={styles.contentBody}>
         <div className={styles.today}>
           <div className={styles.leftCard}>
-            <div className={styles.cityImg}>
-              
+            <div className={`${styles.cityImg} ${styles.card}`}>
+
             </div>
   
-            <div className={styles.detailedInfo}>
+            <div className={`${styles.detailedInfo} ${styles.card}`}>
               
             </div>
           </div>
           
 
-          <div className={styles.hourlyForecast}>
+          <div className={`${styles.hourlyForecast} ${styles.card}`}>
             
           </div>
         </div>
 
-        <div className={styles.tenDayForecast}>
+        <div className={`${styles.tenDayForecast} ${styles.card}`}>
           10 DAY FORECAST
         </div>
       </div>
