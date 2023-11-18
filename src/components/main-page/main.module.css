@@ -104,9 +104,39 @@
     margin: 45px;
 }
 
+.overlayText {
+    /* font-weight: 500; */
+    margin: 2em 3em;
+    color: white;
+    text-decoration: none;
+    /* font-family: Raleway, sans-serif; */
+    text-shadow: rgba(0, 0, 0, 25%) 0px 8px 8px;
+}
+
+#todayHighLow{
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+#currentTemp{
+    position: absolute;
+    font-family: Raleway, sans-serif;
+    font-weight: 600;
+    font-size: 4.5em;
+}
+
+#currentLocation{
+    position: absolute;
+    font-family: Raleway, sans-serif;
+    font-weight: medium;
+    font-size: 2em
+}
+
 /* Weather img cards */
 .weatherSunny {
-    background-position: 0px -100px;
+    background-position: center;
     background-image: url("./images/sunny1.png");
 }
 

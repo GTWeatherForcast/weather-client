@@ -13,7 +13,19 @@ function MainPage() {
       <div className={styles.contentBody}>
         <div className={styles.today}>
           <div className={styles.leftCard}>
-            <div className={`${styles.cityImg} ${styles.card} ${styles.weatherSunny}`}></div>
+            <div className={`${styles.cityImg} ${styles.card} ${styles.weatherSunny}`}>
+              <div className={`${styles.overlayText}`}>
+                <div id={`${styles.todayHighLow}`}>
+                  97°F/89°F
+                </div>
+                <div id={`${styles.currentTemp}`}>
+                  95°F
+                </div>
+                <div id={`${styles.currentLocation}`}>
+                  Atlanta, GA
+                </div>
+              </div>
+            </div>
 
             <div className={`${styles.detailedInfo} ${styles.card}`}></div>
           </div>
