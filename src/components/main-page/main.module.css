@@ -76,6 +76,8 @@
 .cityImg {
     background-color: white;
     height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .detailedInfo {
@@ -100,4 +102,62 @@
 
 .margin {
     margin: 45px;
+}
+
+/* Weather img cards */
+.weatherSunny {
+    background-position: 0px -100px;
+    background-image: url("./images/sunny1.png");
+}
+
+.weatherClearNight {
+
+}
+
+.weatherCloudy {
+    background-image: url("./images/cloud.png");
+}
+
+.weatherCloudyNight {
+    background-image: url("./images/cloud.png");
+}
+
+.weatherPartlyCloudy {
+    
+}
+
+.weatherPartlyCloudyNight {
+    
+}
+
+.weatherRain {
+    background-image: url("./images/rain.png");
+}
+
+.weatherRainNight {
+    background-image: url("./images/rain.png");
+}
+
+.weatherSnow {
+    background-image: url("./images/snow.png");
+}
+
+.weatherSnowNight {
+    background-image: url("./images/snow.png");
+}
+
+.weatherThunderstorm {
+    
+}
+
+.weatherThunderstormNight {
+    
+}
+
+.weatherHail {
+    
+}
+
+.weatherHailNight {
+    
 }

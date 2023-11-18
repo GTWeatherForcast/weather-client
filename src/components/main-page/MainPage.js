@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./main.module.css";
-import sunny1 from "./images/sunny1.png";
 import NavBar from "./navbar.js";
 import HorizontalLine from "./HorizontalLine.js";
 
@@ -14,7 +13,7 @@ function MainPage() {
       <div className={styles.contentBody}>
         <div className={styles.today}>
           <div className={styles.leftCard}>
-            <div className={`${styles.cityImg} ${styles.card}`}></div>
+            <div className={`${styles.cityImg} ${styles.card} ${styles.weatherSunny}`}></div>
 
             <div className={`${styles.detailedInfo} ${styles.card}`}></div>
           </div>
