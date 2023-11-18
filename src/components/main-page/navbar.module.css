@@ -6,7 +6,7 @@
 }
 
 .textStyle {
-  z-index: 99;
+  /* z-index: 99; */
   color: black;
   text-decoration: none;
   font-family: Montserrat;
@@ -16,12 +16,14 @@
 
 .navbar {
   background-color: #ffffff10;
+  /* background-color: #23a9d2; */
   padding: 10px;
   display: flex;
   justify-content: space-between;
   /* To push the children to opposite ends horizontally */
   align-items: center;
   /* To center the children vertically */
+  position: sticky;
 }
 
 .logo {
@@ -34,6 +36,37 @@
   padding: 0;
 }
 
-.searchBar {
-  padding: 20px;
+/** NAVIGATION */
+
+/* MAIN NAVBAR */
+.mainNav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0px 20px;
+  background-color: #23a9d2;
+}
+
+.navGroup {
+  display: flex;
+  align-self: center;
+  flex: 1;
+}
+
+#search {
+  flex: 2;
+}
+
+.fakeLink {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+  display: inline;
+  margin: 25px 20px;
+  /* padding: 0; */
 }

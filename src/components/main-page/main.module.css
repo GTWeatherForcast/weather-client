@@ -5,9 +5,20 @@
 } */
 /* NEVER APPLY to * UNLESS YOU ABSOLUTELY WANT TO APPLY THIS STYLE TO EVERYTHING */
 
+.mainNavDiv {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
 .mainBody {
-    height: 1500px;
-    overflow: auto;
+    overflow: scroll;
+    background-color: #17A4D0;
+    height: 100vh;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
 }
 
 #cityImage {
@@ -35,7 +46,7 @@
     left: 10px;
     color: white;
     padding: 5px;
-    z-index: 99;
+    z-index: 1;
 }
 
 .image {
@@ -68,7 +79,7 @@
     border: 777777;
 }
 
-.city-rectangle {
+.cityRectangle {
     width: 700px;
     height: 400px;
     background-color: #ffffff;
@@ -99,7 +110,7 @@
 
 /* default text style */
 .textStyle {
-    z-index: 99;
+    /* z-index: 99; */
     font-weight: 50;
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -118,7 +129,28 @@
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
+/* Styles redo */
+
+.contentBody {
+    /* display: flex; */
+    /* flex-direction: column; */
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    margin: 4px;
+    box-shadow: rgba(0, 0, 0, 25%) 0px 8px 8px;
+    /* border: 1px solid #77777777 */
+}
+
+.today {
+    margin-top: 60px;
+    margin-bottom: 30px;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
@@ -158,4 +190,33 @@
     flex-direction: column;
     margin-right: 450px;
     margin-top: 50px;
+    flex-direction: row;
+    height: 500px;
+}
+
+.leftCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cityImg {
+    background-color: white;
+    height: 100%;
+}
+
+.detailedInfo {
+    display: flex;
+    height: 200px;
+    /* background-color: blue; */
+}
+
+.hourlyForecast {
+    /* background-color: red; */
+    width: 300px;
+}
+
+.tenDayForecast {
+    margin: 30px inherit;
+    height: 500px;
 }

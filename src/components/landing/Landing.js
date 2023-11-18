@@ -3,7 +3,7 @@ import { LocationSearch } from "../inputs/SearchBar";
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
-// import "../../App.css";
+import { Link } from "react-router-dom";
 
 // 0 = left card
 // 1 = no card
@@ -11,8 +11,7 @@ import { useState } from "react";
 export function LandingCard({ setCardIndex, cardIndex = 1 }) {
   function returnToLanding() {
     setCardIndex(1);
-    window.history.replaceState(null, "", "..");
-    // todo: modify URL to have / without updating page
+    // window.history.replaceState(null, "", "..");
   }
 
   function toggleSignUp() {
@@ -20,8 +19,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       returnToLanding();
     } else {
       setCardIndex(2);
-      window.history.replaceState(null, "", "signup");
-      // todo: modify URL to have /login without updating page
+      // window.history.replaceState(null, "", "signup");
     }
   }
 
@@ -30,8 +28,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       returnToLanding();
     } else {
       setCardIndex(0);
-      window.history.replaceState(null, "", "login");
-      // todo: modify URL to have /signup without updating page
+      // window.history.replaceState(null, "", "login");
     }
   }
 
@@ -48,32 +45,37 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       <div className={styles.landingNav}>
         <nav className={`${styles.mainNav}`}>
           <ol>
-            {/* <li><Link to="/">gt forecast</Link></li> */}
             <li>
-              <button
+              <Link
+                to={"/"}
+                replace={true}
                 className={`${styles.fakeLink} textStyle`}
                 onClick={returnToLanding}
               >
                 gt forecast
-              </button>
+              </Link>
             </li>
           </ol>
           <ol>
             <li>
-              <button
+              <Link
+                to={"/login"}
+                replace={true}
                 className={`${styles.fakeLink} textStyle`}
                 onClick={toggleSignIn}
               >
                 sign in
-              </button>
+              </Link>
             </li>
             <li>
-              <button
+              <Link
+                to={"/signup"} 
+                replace={true}
                 className={`${styles.fakeLink} textStyle`}
                 onClick={toggleSignUp}
               >
                 sign up
-              </button>
+              </Link>
             </li>
           </ol>
         </nav>
@@ -86,7 +88,6 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
         <div id={styles["rectangle"]}></div>
         <LocationSearch />
       </div>
-      {/* todo: change classes to reflect whether it is signup or login page so we can move stuff around */}
     </div>
   );
 }
