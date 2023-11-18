@@ -16,6 +16,7 @@
 
 .navbar {
   background-color: #ffffff10;
+  /* background-color: #23a9d2; */
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -46,7 +47,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 0px 20px;
-  background-color: #ffffff10;
+  background-color: #23a9d2;
 }
 
 .navGroup {

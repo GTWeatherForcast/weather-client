@@ -9,13 +9,16 @@
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 100%;
 }
 
 .mainBody {
     overflow: scroll;
     background-color: #17A4D0;
     height: 100vh;
-
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
 }
 
 #cityImage {
@@ -124,4 +127,48 @@
 
 .dropShadow {
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Styles redo */
+
+.contentBody {
+    /* display: flex; */
+    /* flex-direction: column; */
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+
+.today {
+    display: flex;
+    flex-direction:  row;
+    height: 500px;
+}
+
+.leftCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cityImg {
+    background-color: white;
+    height: 100%;
+}
+
+.detailedInfo {
+    display: flex;
+    height: 150px;
+    background-color: blue;
+}
+
+.hourlyForecast {
+    background-color: red;
+    width: 300px;
+}
+
+.tenDayForecast {
+    width: 100%;
+    height: 500px;
+    background-color: white;
 }

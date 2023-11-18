@@ -10,26 +10,28 @@ function MainPage() {
         <NavBar />
       </div>
 
-      <div id={styles.today}>
-        <div id={styles.cityImage} className={`${styles["city-rectangle"]} ${styles.dropShadow}`}>
-        {/* <div id={``} className={`${styles.dropShadow}`}> */}
-           <div className={styles["overlay-text"]}>
-             <div id={styles.maxMinTemp}> max/min temp </div>
-             <div id={styles.currentTemp}> current temp </div>
-             <div id={styles.cityName}> city name </div>
-           </div>
-           <img className={styles.image} src={sunny1} alt="sunny image" />
+      <div className={styles.contentBody}>
+        <div className={styles.today}>
+          <div className={styles.leftCard}>
+            <div className={styles.cityImg}>
+              
+            </div>
+  
+            <div className={styles.detailedInfo}>
+              
+            </div>
+          </div>
+          
+
+          <div className={styles.hourlyForecast}>
+            
+          </div>
         </div>
 
-        <div id={styles.hourlyTemp} className={`${styles.rectangle1} ${styles.dropShadow}`}>
+        <div className={styles.tenDayForecast}>
+          10 DAY FORECAST
         </div>
       </div>
-
-      <div id={styles.future}>
-
-      </div>
-
-
     </div>
   );
   // return (
