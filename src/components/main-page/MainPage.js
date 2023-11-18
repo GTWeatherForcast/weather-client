@@ -3,7 +3,7 @@ import styles from "./main.module.css";
 import styles2 from "./cityimg.module.css";
 import NavBar from "./navbar.js";
 import HorizontalLine from "./HorizontalLine.js";
-import RangeSlider from "./RangeSlider.js";
+import RangeSlider_ReadOnly from "./RangeSlider.js";
 
 function MainPage() {
   return (
@@ -44,7 +44,7 @@ function MainPage() {
                 <p className={styles.detailData}>40</p>
                 <div>
                   <p className={styles.detailSubtitle}>Good</p>
-                  <RangeSlider/>
+                  <RangeSlider_ReadOnly initialVal={40} minVal={0} maxVal={301} step={1} />
                 </div>
               </div>
 
@@ -53,7 +53,7 @@ function MainPage() {
                 <p className={styles.detailData}>5</p>
                 <div>
                   <p className={styles.detailSubtitle}>Moderate</p>
-                  <RangeSlider/>
+                  <RangeSlider_ReadOnly initialVal={5} minVal={1} maxVal={11} step={1} />
                 </div>
               </div>
 
