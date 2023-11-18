@@ -35,14 +35,14 @@ function MainPage() {
               <div id={styles.detailHumid} className={`${styles.detailCard}`}>
                 <h1>HUMIDITY</h1>
                 <p className={styles.detailData}>53%</p>
-                <p>Dew point: 64°F</p>
+                <p className={styles.detailSubtitle}>Dew point: 64°F</p>
               </div>
 
               <div id={styles.detailAQ} className={`${styles.detailCard}`}>
                 <h1>AIR QUALITY</h1>
-                <p className={styles.detailData}>40</p>
+                <div className={styles.detailData}>40</div>
                 <div>
-                  <p>Good</p>
+                  <p className={styles.detailSubtitle}>Good</p>
                 </div>
               </div>
 
@@ -50,14 +50,14 @@ function MainPage() {
                 <h1>UV INDEX</h1>
                 <p className={styles.detailData}>5</p>
                 <div>
-                  <p>Moderate</p>
+                  <p className={styles.detailSubtitle}>Moderate</p>
                 </div>
               </div>
 
               <div id={styles.detailPrecip} className={`${styles.detailCard}`}>
                 <h1>PRECIPITATION</h1>
                 <p className={styles.detailData}>0"</p>
-                <p>in the next 12 hours</p>
+                <p className={styles.detailSubtitle}>in the next 12 hours</p>
               </div>
             </div>
           </div>
