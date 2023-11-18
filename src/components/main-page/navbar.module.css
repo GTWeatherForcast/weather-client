@@ -47,7 +47,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 0px 20px;
-  background-color: #23a9d2;
+  background-color: rgba(27, 172, 216, 0.8)
 }
 
 .navGroup {
