@@ -19,7 +19,7 @@ function MainPage() {
               <div className={`${styles2.cityImg}`}></div>
               <div className={`${styles.overlayText}`}>
                 <div id={`${styles.todayHighLow}`}>
-                  97°F/89°F
+                  97°F / 89°F
                 </div>
                 <div id={`${styles.currentTemp}`}>
                   95°F
@@ -30,7 +30,24 @@ function MainPage() {
               </div>
             </div>
 
-            <div className={`${styles.detailedInfo} ${styles.card}`}></div>
+            <div className={`${styles.detailedInfo} ${styles.card}`}>
+
+              <div id={styles.detailHumid} className={`${styles.detailCard}`}>
+                HUMIDITY
+              </div>
+
+              <div id={styles.detailAQ} className={`${styles.detailCard}`}>
+                AIR QUALITY
+              </div>
+
+              <div id={styles.detailUV} className={`${styles.detailCard}`}>
+                UV INDEX
+              </div>
+
+              <div id={styles.detailPrecip} className={`${styles.detailCard}`}>
+                PRECIPITATION
+              </div>
+            </div>
           </div>
 
           <div className={`${styles.hourlyForecast} ${styles.card}`}></div>
