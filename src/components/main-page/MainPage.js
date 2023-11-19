@@ -5,6 +5,7 @@ import NavBar from "./navbar.js";
 import HorizontalLine from "./HorizontalLine.js";
 import RangeSlider_ReadOnly from "./RangeSlider.js";
 
+// todo: make the values in detailData linked with a prop/state so we can update them on the fly and also link the subtitle/sliders automatically
 function MainPage() {
   return (
     <div className={`${styles.mainBody}`}>
