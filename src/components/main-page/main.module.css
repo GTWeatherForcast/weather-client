@@ -184,9 +184,69 @@
 }
 
 .lineContainer {
-    margin-left: 30px;
+    margin-left: 10px;
+}
+
+.inlineBlock {
+    display: inline-flex;
+}
+
+.sum {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.sum2 {
+    margin-left: 20px;
+    white-space: nowrap;
 }
 
 .margin {
-    margin: 45px;
+    color: #8B8B8B;
+    text-align: left;
+    margin: 14px;
+    white-space: nowrap;
+}
+
+.black {
+    color: black;
+}
+
+.originalColor {
+    color: #8B8B8B;
+}
+
+.icon {
+    margin-left: 20px;
+    width: 40px;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+.tContainer {
+    /* color: #8B8B8B; */
+    font-size: 14px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.currentDateIcon {
+    width: 100px;
+}
+
+.cdIconContainer {
+    position: relative;
+}
+
+.clickedColor {
+    color: black;
 }
