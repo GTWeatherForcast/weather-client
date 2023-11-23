@@ -41,7 +41,11 @@ function MainPage() {
               <div id={styles.detailHumid} className={`${styles.detailCard}`}>
                 <h1>HUMIDITY</h1>
                 <p className={styles.detailData}>53%</p>
-                <p className={styles.detailSubtitle}>Dew point: 64°F</p>
+                <p
+                  className={`${styles.detailSubtitle} ${styles.uvDetailSubtitle}`}
+                >
+                  Dew point: 64°F
+                </p>
               </div>
 
               <div id={styles.detailAQ} className={`${styles.detailCard}`}>

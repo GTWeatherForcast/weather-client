@@ -140,6 +140,10 @@
     border-right: 1px solid #4D4D4D;
 }
 
+.uvDetailSubtitle {
+    padding-top: 15px;
+}
+
 #detailPrecip {}
 
 .hourlyForecast {
