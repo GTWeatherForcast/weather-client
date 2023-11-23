@@ -1,5 +1,5 @@
 import styles from "./Landing.module.css";
-import { LocationSearch } from "../inputs/SearchBar"
+import LocationSearch from "../inputs/SearchBar"
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
@@ -8,6 +8,7 @@ import { useState } from "react";
 // 1 = no card
 // 2 = right card
 export function LandingCard({ setCardIndex, cardIndex = 1 }) {
+  const [search, setSearch] = useState([]);
   function returnToLanding() {
     setCardIndex(1);
     window.history.replaceState(null, "", "..");
@@ -32,6 +33,10 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       window.history.replaceState(null, "", "login");
       // todo: modify URL to have /signup without updating page
     }
+  }
+
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData);
   }
 
   return (
@@ -62,7 +67,8 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
           Welcome to Georgia Tech Weather Forecast!
         </p>
         <div id={styles["rectangle"]}></div>
-        <LocationSearch />
+        <LocationSearch setSearch = {setSearch}/>
+        
       </div>
       {/* todo: change classes to reflect whether it is signup or login page so we can move stuff around */}
     </div>
