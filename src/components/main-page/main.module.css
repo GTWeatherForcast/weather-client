@@ -259,3 +259,11 @@
     top: -0.5em;
     left: -0.6rem;
 }
+
+#hourlyLineContainer {
+    align-items: center;
+}
+
+.hourlyMargin {
+    margin: 20px;
+}

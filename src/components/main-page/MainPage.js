@@ -84,7 +84,23 @@ function MainPage() {
             </div>
           </div>
 
-          <div className={`${styles.hourlyForecast} ${styles.card}`}></div>
+          <div className={`${styles.hourlyForecast} ${styles.card}`}>
+            <div id={styles.hourlyLineContainer}>
+              <div className={styles.hourlyMargin}>00:00</div>
+              <HorizontalLine />
+              <div className={styles.hourlyMargin}>00:00</div>
+              <HorizontalLine />
+              <div className={styles.hourlyMargin}>00:00</div>
+              <HorizontalLine />
+              <div className={styles.hourlyMargin}>00:00</div>
+              <HorizontalLine />
+              <div className={styles.hourlyMargin}>00:00</div>
+              <HorizontalLine />
+              <div className={styles.hourlyMargin}>00:00</div>
+              <HorizontalLine />
+              <div className={styles.hourlyMargin}>00:00</div>
+            </div>
+          </div>
         </div>
 
         <div
