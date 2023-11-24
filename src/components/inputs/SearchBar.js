@@ -11,7 +11,7 @@ const LocationSearch = ({ setSearch }) => {
   }
 
   const loadOptions = (inputValue) => {
-    return fetch(`${url}/cities?minPopulation=1000000&namePrefix=${inputValue}`, options)
+    return fetch(`${url}/cities?minPopulation=100000&namePrefix=${inputValue}`, options)
     .then(response => response.json())
     .then(response => {
         const results = response.data?.map((city) => {
@@ -21,6 +21,7 @@ const LocationSearch = ({ setSearch }) => {
           };
         });
         setSearch(results);
+        console.log(results);
       })
     .then(err => console.error(err))
   }

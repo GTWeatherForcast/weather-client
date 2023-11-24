@@ -3,6 +3,7 @@ import LocationSearch from "../inputs/SearchBar"
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
+import SearchResults from "../SearchResults";
 
 // 0 = left card
 // 1 = no card
@@ -68,7 +69,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
         </p>
         <div id={styles["rectangle"]}></div>
         <LocationSearch setSearch = {setSearch}/>
-        
+        <SearchResults results = {search}/>
       </div>
       {/* todo: change classes to reflect whether it is signup or login page so we can move stuff around */}
     </div>
