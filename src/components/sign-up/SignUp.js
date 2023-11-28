@@ -1,5 +1,4 @@
 import styles from '../inputs/FormInput.module.css';
-import "../../App.css";
 import FormInput from '../inputs/FormInput';
 
 // todo: form submission, clientside and server-side form validation
