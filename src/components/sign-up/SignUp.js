@@ -1,7 +1,9 @@
 import styles from '../inputs/FormInput.module.css';
 import "../../App.css";
 import FormInput from '../inputs/FormInput';
-
+import {useState} from "react"
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 // todo: form submission, clientside and server-side form validation
 
 function SignUpPage() {
@@ -13,7 +15,7 @@ function SignUpPage() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     // const API_URL = 'http://localhost:8080/sign-up';)
     if(!username) {
       alert("Username is blank.")
@@ -28,7 +30,7 @@ function SignUpPage() {
       alert("Please confirm password.")
     }
     else if(password !== passwordtwo) {
-      alert("Password confirm password correctly.")
+      alert("Passwords do not match.")
     }
 
     else {
@@ -60,13 +62,14 @@ function SignUpPage() {
       <h2 className="centerText">SIGN UP FOR FREE</h2>
       <p className="centerText">We won't bite, we promise</p>
 
-      <form action="" className={`${styles.mainForm}`} onSubmit={(e) => { e.preventDefault() }}>
+      <form action="" className={`${styles.mainForm}`} onSubmit={handleSubmit}>
         
         <FormInput
           type="text"
           id="signup-username"
           label="Username"
           placeholder=""
+          onChange = {(e) => setUsername(e.target.value)}
         />
 
         <FormInput
@@ -74,6 +77,7 @@ function SignUpPage() {
           id="signup-email"
           label="Email"
           placeholder=""
+          onChange = {(e) => setEmail(e.target.value)}
         />
 
         <FormInput
@@ -82,7 +86,7 @@ function SignUpPage() {
           label="Password"
           placeholder=""
           title="Password requirements: ?"
-
+          onChange = {(e) => setPassword(e.target.value)}
         />
 
         <FormInput
@@ -91,6 +95,7 @@ function SignUpPage() {
           label="Confirm Password"
           placeholder=""
           title="Please reenter your password."
+          onChange = {(e) => confirmPassword(e.target.value)}
         />
 
         <FormInput
