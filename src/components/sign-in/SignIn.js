@@ -8,13 +8,12 @@ import axios from 'axios'
 export default function SignInPage() {
   const navigate = useNavigate()
   const auth = () => {
-    console.log("hello")
     axios.post('http://localhost:8080/api/v1/auth/sign-in', {
       username: document.getElementById("login-username").value,
       password: document.getElementById("login-password").value
     }).then((response) => {
       console.log(response.data.message)
-      navigate("/")
+      navigate("/mainpage")
     }).catch((error) => {
       console.error('Error communicating with server', error);
       alert("Username or password is invalid!")

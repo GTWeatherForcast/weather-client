@@ -8,7 +8,6 @@ const LocationSearch = ({ setSearch }) => {
   const handleOnChange = (searchData) => {
     setLocationString(searchData);
     loadOptions(searchData);
-    console.log(searchData);
   }
 
   const loadOptions = (inputValue) => {

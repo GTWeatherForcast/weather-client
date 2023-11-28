@@ -1,16 +1,13 @@
 import styles from "./Landing.module.css";
-import LocationSearch from "../inputs/SearchBar"
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
-import SearchResults from "../SearchResults";
 import { Link } from "react-router-dom";
 
 // 0 = left card
 // 1 = no card
 // 2 = right card
 export function LandingCard({ setCardIndex, cardIndex = 1 }) {
-  const [search, setSearch] = useState([]);
   function returnToLanding() {
     setCardIndex(1);
     // window.history.replaceState(null, "", "..");
@@ -32,10 +29,6 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
       setCardIndex(0);
       // window.history.replaceState(null, "", "login");
     }
-  }
-
-  const handleOnSearchChange = (searchData) => {
-    console.log(searchData);
   }
 
   return (
@@ -92,8 +85,6 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
           Welcome to Georgia Tech Weather Forecast!
         </p>
         <div id={styles["rectangle"]}></div>
-        <LocationSearch setSearch = {setSearch}/>
-        <SearchResults results = {search}/>
       </div>
     </div>
   );

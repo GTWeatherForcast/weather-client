@@ -1,9 +1,19 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import styles from "./navbar.module.css";
-import { LocationSearch } from "../inputs/SearchBar";
+import LocationSearch from "../inputs/SearchBar";
 import { Link } from "react-router-dom";
+import SearchResults from "../SearchResults";
+import { useState }  from "react";
 
-function NavBar() {
+function NavBar({sendDataToGParent}) {
+  const [search, setSearch] = useState([]);
+  const [wdata, setWData] = useState([]);
+
+  const handleChildData = (data) => {
+      setWData(data);
+      sendDataToGParent(data);
+  }
   return (
     <nav className={`${styles.mainNav}`}>
       <div className={`${styles.navGroup} flexLeft`}>
@@ -17,24 +27,17 @@ function NavBar() {
         </Link>
       </div>
       <div id={styles.search} className={`${styles.navGroup} flexCenter`}>
-        <LocationSearch />
+        <LocationSearch setSearch = {setSearch}/>
+        <SearchResults results = {search} sendDataToParent={handleChildData}/>
       </div>
       <div className={`${styles.navGroup} flexRight`}>
         <Link
-          to={"/login"}
-          // replace={true}
-          className={`${styles.fakeLink} textStyle`}
-          // onClick={toggleSignIn}
-        >
-          sign in
-        </Link>
-        <Link
-          to={"/signup"}
+          to={"/"}
           // replace={true}
           className={`${styles.fakeLink} textStyle`}
           // onClick={toggleSignUp}
         >
-          sign up
+          log out
         </Link>
       </div>
     </nav>
