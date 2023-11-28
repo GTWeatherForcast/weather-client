@@ -1,0 +1,75 @@
+.cityImg, .cityImg:before {
+  position: absolute;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+/* Weather img cards */
+
+/* Use base to set background color in case img fails */
+.weatherSunny {
+  background-color: #537ab0;
+}
+
+/* Use .cityImg to actually set the image, as well as additional effects on the img itself (supports opacity) */
+.weatherSunny .cityImg {
+  opacity: 0.8;
+  /* filter: brightness(0.95); */
+  background-position: center;
+  background-image: url("./images/sunny1.png");
+}
+
+.weatherClearNight {
+
+}
+
+.weatherCloudy {
+  background-image: url("./images/cloud.png");
+}
+
+.weatherCloudyNight {
+  background-image: url("./images/cloud.png");
+}
+
+.weatherPartlyCloudy {
+  
+}
+
+.weatherPartlyCloudyNight {
+  
+}
+
+.weatherRain {
+  background-image: url("./images/rain.png");
+}
+
+.weatherRainNight {
+  background-image: url("./images/rain.png");
+}
+
+.weatherSnow {
+  background-image: url("./images/snow.png");
+}
+
+.weatherSnowNight {
+  background-image: url("./images/snow.png");
+}
+
+.weatherThunderstorm {
+  
+}
+
+.weatherThunderstormNight {
+  
+}
+
+.weatherHail {
+  
+}
+
+.weatherHailNight {
+  
+}

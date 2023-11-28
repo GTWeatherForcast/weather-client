@@ -1,0 +1,47 @@
+.container {
+
+}
+
+/* The following is modified from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+/* The slider itself */
+.slider {
+  box-sizing: border-box;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 6px; /* Specified height */
+  background: linear-gradient(90deg, rgba(0, 255, 0, 0.6) 0%, rgba(255, 0, 0, 0.6) 100%);
+  outline: none; /* Remove outline */
+  border: none;
+  border-radius: 12px;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  box-sizing: border-box;
+  -webkit-appearance: none; /* Override default look */
+  outline: none; /* Remove outline */
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: rgba(0, 0, 0, 25%) 2px 2px 8px;
+  border-radius: 12px;
+}
+
+.slider::-moz-range-thumb {
+  box-sizing: border-box;
+  outline: none; /* Remove outline */
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.3);
+  box-shadow: rgba(0, 0, 0, 25%) 2px 2px 8px;
+  border-radius: 12px;
+}
