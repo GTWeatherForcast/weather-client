@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+/* eslint-disable react/jsx-pascal-case */
+import React, { useEffect, useState } from "react";
 import styles from "./main.module.css";
 import styles2 from "./cityimg.module.css";
 import NavBar from "./navbar.js";
 import HorizontalLine from "./HorizontalLine.js";
 import RangeSlider_ReadOnly from "./RangeSlider.js";
 import cloud from "./images/cloud.png";
+import { weatherUrl, weatherKey } from "../../api.js"; 
 
 // todo: make the values in detailData linked with a prop/state so we can update them on the fly and also link the subtitle/sliders automatically
 function MainPage() {
   const [textColor, setTextColor] = useState(styles.originalColor);
+  const [wData, setWData] = useState(null);
 
   const dateOnClick = () => {
     // change color
@@ -16,13 +19,37 @@ function MainPage() {
     // update right side info
   };
 
+  const handleGChildData = (data) => {
+    setWData(data);
+  }
+  
+  useEffect(() => {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const currentWeather = fetch(`${weatherUrl}/weather?lat=${latitude}&lon=${longitude}&appid=${weatherKey}`);
+            const forecastWeather = fetch(`${weatherUrl}/forecast?lat=${latitude}&lon=${longitude}&appid=${weatherKey}`);
+
+            Promise.all([currentWeather, forecastWeather])
+                .then(responses => Promise.all(responses.map(res => res.json())))
+                .then(([currentWeatherData, forecastWeatherData]) => {
+                    setWData([currentWeatherData, forecastWeatherData]);
+                    console.log([currentWeatherData, forecastWeatherData])
+                })
+                .catch(error => console.error("Error fetching weather data:", error));
+        });
+    }
+  }, []);
+
   return (
     <div className={`${styles.mainBody}`}>
       <div className={styles.mainNavDiv}>
-        <NavBar />
+        <NavBar sendDataToGParent={handleGChildData}/>
       </div>
 
-      <div className={styles.contentBody}>
+      {wData && <div className={styles.contentBody}>
         <div className={styles.today}>
           <div className={styles.leftCard}>
             {/* Change styles2.weatherSunny to other weather conditions */}
@@ -31,20 +58,20 @@ function MainPage() {
             >
               <div className={`${styles2.cityImg}`}></div>
               <div className={`${styles.overlayText}`}>
-                <div id={`${styles.todayHighLow}`}>97°F / 89°F</div>
-                <div id={`${styles.currentTemp}`}>95°F</div>
-                <div id={`${styles.currentLocation}`}>Atlanta, GA</div>
+                <div id={`${styles.todayHighLow}`}>H: {Math.round((9/5)*(wData[0].main.temp_max - 273)+32)}°F / L: {Math.round((9/5)*(wData[0].main.temp_min - 273)+32)}°F</div>
+                <div id={`${styles.currentTemp}`}>{Math.round((9/5)*(wData[0].main.temp - 273)+32)}°F</div>
+                <div id={`${styles.currentLocation}`}>{wData[0].name}, {wData[0].sys.country}</div>
               </div>
             </div>
 
             <div className={`${styles.detailedInfo} ${styles.card}`}>
               <div id={styles.detailHumid} className={`${styles.detailCard}`}>
                 <h1>HUMIDITY</h1>
-                <p className={styles.detailData}>53%</p>
+                <p className={styles.detailData}>{wData[0].main.humidity}%</p>
                 <p
                   className={`${styles.detailSubtitle} ${styles.uvDetailSubtitle}`}
                 >
-                  Dew point: 64°F
+                  Dew point: {wData[0].main.dew_point}
                 </p>
               </div>
 
@@ -209,7 +236,7 @@ function MainPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
     </div>
   );
 }
