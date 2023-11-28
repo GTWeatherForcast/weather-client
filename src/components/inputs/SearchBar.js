@@ -8,21 +8,21 @@ const LocationSearch = ({ setSearch }) => {
   const handleOnChange = (searchData) => {
     setLocationString(searchData);
     loadOptions(searchData);
+    console.log(searchData);
   }
 
   const loadOptions = (inputValue) => {
-    return fetch(`${url}/cities?minPopulation=1000000&namePrefix=${inputValue}`, options)
+    return fetch(`${url}/cities?minPopulation=100000&namePrefix=${inputValue}`, options)
     .then(response => response.json())
     .then(response => {
         const results = response.data?.map((city) => {
           return {
-            value: `${city.latitude}, ${city.longitude}`,
+            value: `${city.latitude},${city.longitude}`,
             label: `${city.name}, ${city.countryCode}`
           };
         });
         setSearch(results);
       })
-    .then(err => console.error(err))
   }
 
   return (

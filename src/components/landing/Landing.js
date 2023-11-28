@@ -3,6 +3,7 @@ import LocationSearch from "../inputs/SearchBar"
 import SignInPage from "../sign-in/SignIn";
 import SignUpPage from "../sign-up/SignUp";
 import { useState } from "react";
+import SearchResults from "../SearchResults";
 import { Link } from "react-router-dom";
 
 // 0 = left card
@@ -92,7 +93,7 @@ export function LandingCard({ setCardIndex, cardIndex = 1 }) {
         </p>
         <div id={styles["rectangle"]}></div>
         <LocationSearch setSearch = {setSearch}/>
-        
+        <SearchResults results = {search}/>
       </div>
     </div>
   );
