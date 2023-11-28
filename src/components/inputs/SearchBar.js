@@ -8,6 +8,7 @@ const LocationSearch = ({ setSearch }) => {
   const handleOnChange = (searchData) => {
     setLocationString(searchData);
     loadOptions(searchData);
+    console.log(searchData);
   }
 
   const loadOptions = (inputValue) => {
@@ -16,14 +17,12 @@ const LocationSearch = ({ setSearch }) => {
     .then(response => {
         const results = response.data?.map((city) => {
           return {
-            value: `${city.latitude}, ${city.longitude}`,
+            value: `${city.latitude},${city.longitude}`,
             label: `${city.name}, ${city.countryCode}`
           };
         });
         setSearch(results);
-        console.log(results);
       })
-    .then(err => console.error(err))
   }
 
   return (

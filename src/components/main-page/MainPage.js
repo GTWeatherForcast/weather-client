@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./main.css";
 
+
 function MainPage() {
   return (
-    <div className="mainBody textStyle">
+  <div className="mainBody textStyle">
       {/* today : max/min temp, city, temperature */}
-
+    
       <div id="today">
         <div className="center">
           {/* TODO : make image random */}
