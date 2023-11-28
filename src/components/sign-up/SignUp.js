@@ -1,5 +1,4 @@
 import styles from '../inputs/FormInput.module.css';
-import "../../App.css";
 import FormInput from '../inputs/FormInput';
 import {useState} from "react"
 import { useNavigate } from 'react-router-dom';
@@ -102,6 +101,7 @@ function SignUpPage() {
           type="submit"
           id="signup"
           value="Sign Up"
+          onClick= {auth}
         />
       </form>
     </div>
