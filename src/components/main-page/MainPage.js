@@ -71,27 +71,27 @@ function MainPage() {
                 <p
                   className={`${styles.detailSubtitle} ${styles.uvDetailSubtitle}`}
                 >
-                  Dew point: {wData[0].main.dew_point}
+                  Dew point: {Math.round((9/5)*(wData[0].main.temp - 273)+32) - ((100-wData[0].main.humidity)/5)}°
                 </p>
               </div>
 
               <div id={styles.detailAQ} className={`${styles.detailCard}`}>
-                <h1>AIR QUALITY</h1>
-                <p className={styles.detailData}>40</p>
+                <h1>FEELS LIKE</h1>
+                <p className={styles.detailData}>{Math.round((9/5)*(wData[0].main.feels_like - 273)+32)}°F</p>
                 <div>
-                  <p className={styles.detailSubtitle}>Good</p>
-                  <RangeSlider_ReadOnly
+                  <p className={styles.detailSubtitle}>Wind is making it feel cooler.</p>
+                  {/* <RangeSlider_ReadOnly
                     initialVal={40}
                     minVal={0}
                     maxVal={301}
                     step={1}
-                  />
+                  /> */}
                 </div>
               </div>
 
               <div id={styles.detailUV} className={`${styles.detailCard}`}>
-                <h1>UV INDEX</h1>
-                <p className={styles.detailData}>5</p>
+                <h1>VISIBILITY</h1>
+                <p className={styles.detailData}>{}</p>
                 <div>
                   <p className={styles.detailSubtitle}>Moderate</p>
                   <RangeSlider_ReadOnly
@@ -105,8 +105,8 @@ function MainPage() {
 
               <div id={styles.detailPrecip} className={`${styles.detailCard}`}>
                 <h1>PRECIPITATION</h1>
-                <p className={styles.detailData}>0"</p>
-                <p className={styles.detailSubtitle}>in the next 12 hours</p>
+                <p className={styles.detailData}>{wData[0].rain}</p>
+                <p className={styles.detailSubtitle}>in the next hour</p>
               </div>
             </div>
           </div>
