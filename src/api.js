@@ -1,4 +1,6 @@
 export const url = 'https://wft-geo-db.p.rapidapi.com/v1/geo';
+export const weatherUrl = "https://api.openweathermap.org/data/2.5";
+export const weatherKey = "249bb7039e9db251552fd0335e850444";
 export const options = {
 	method: 'GET',
 	headers: {
