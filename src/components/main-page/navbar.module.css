@@ -56,10 +56,10 @@
   flex: 1;
 }
 
-.searching {
+/* .searching {
   flex-direction: column;
   padding-left: 120px;
-}
+} */
 
 #search {
   flex: 2;
