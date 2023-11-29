@@ -8,6 +8,7 @@ import { useState }  from "react";
 
 function NavBar({sendDataToGParent}) {
   const [search, setSearch] = useState([]);
+  const [value, setValue] = useState();
   const [wdata, setWData] = useState([]);
 
   const handleChildData = (data) => {
@@ -26,9 +27,9 @@ function NavBar({sendDataToGParent}) {
           gt forecast
         </Link>
       </div>
-      <div id={styles.search} className={`${styles.navGroup} flexCenter`}>
-        <LocationSearch setSearch = {setSearch}/>
-        <SearchResults results = {search} sendDataToParent={handleChildData}/>
+      <div id={styles.search} className={`${styles.searching} ${styles.navGroup} flexCenter`}>
+        <LocationSearch setSearch = {setSearch} setValue = {setValue}/>
+        <SearchResults results = {search} sendDataToParent={handleChildData} searchValue = {value}/>
       </div>
       <div className={`${styles.navGroup} flexRight`}>
         <Link
