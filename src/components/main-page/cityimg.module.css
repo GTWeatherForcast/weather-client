@@ -27,7 +27,7 @@
 }
 
 .weatherCloudy {
-  background-image: url("./images/cloud.png");
+  background-image: url("./images/cloud2.png");
 }
 
 .weatherCloudyNight {
@@ -43,7 +43,7 @@
 }
 
 .weatherRain {
-  background-image: url("./images/rain.png");
+  background-image: url("./images/rainy2.jpeg");
 }
 
 .weatherRainNight {
@@ -51,7 +51,7 @@
 }
 
 .weatherSnow {
-  background-image: url("./images/snow.png");
+  background-image: url("./images/snow2.jpeg");
 }
 
 .weatherSnowNight {

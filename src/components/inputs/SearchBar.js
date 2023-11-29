@@ -2,11 +2,12 @@ import styles from './SearchBar.module.css';
 import { useState } from "react";
 import { url, options } from "../../api.js" 
 
-const LocationSearch = ({ setSearch }) => {
+const LocationSearch = ({ setSearch, setValue }) => {
   const [locationString, setLocationString] = useState("");
 
   const handleOnChange = (searchData) => {
     setLocationString(searchData);
+    setValue(searchData)
     loadOptions(searchData);
   }
 
