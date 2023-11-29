@@ -1,7 +1,8 @@
 .results-list {
-    width: 90%;
+    position:absolute;
+    width: 100%;
     max-width: 512px;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     display: flex;
     flex-direction: column;
     color: black;

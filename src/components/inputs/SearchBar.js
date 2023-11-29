@@ -1,8 +1,9 @@
 import styles from './SearchBar.module.css';
 import { useState } from "react";
 import { url, options } from "../../api.js" 
+import SearchResults from "../SearchResults.js"
 
-const LocationSearch = ({ setSearch, setValue }) => {
+const LocationSearch = ({ setSearch, setValue, children }) => {
   const [locationString, setLocationString] = useState("");
 
   const handleOnChange = (searchData) => {
@@ -27,14 +28,17 @@ const LocationSearch = ({ setSearch, setValue }) => {
 
   return (
     <div className={`${styles.searchBarDiv}`}>
-        <input
-          id="locationSearch"
-          className={`${styles.searchBar}`}
-          type="search"
-          placeholder="Search City, Country, or Zip Code"
-          value={locationString}
-          onChange={(e) => handleOnChange(e.target.value)}
-        />      
+      <input
+        id="locationSearch"
+        className={`${styles.searchBar}`}
+        type="search"
+        placeholder="Search City, Country, or Zip Code"
+        value={locationString}
+        onChange={(e) => handleOnChange(e.target.value)}
+      />
+      { children }
+        {/* <SearchResults results = {search} sendDataToParent={handleChildData} searchValue = {value}/> */}
+      
     </div>
   );
 }

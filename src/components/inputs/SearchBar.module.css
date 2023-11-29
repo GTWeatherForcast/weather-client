@@ -33,6 +33,7 @@
 }
 
 .searchBarDiv {
+  position: relative;
   width: 100%;
   max-width: 512px;
   margin: 0 10px;

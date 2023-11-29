@@ -28,8 +28,9 @@ function NavBar({sendDataToGParent}) {
         </Link>
       </div>
       <div id={styles.search} className={`${styles.searching} ${styles.navGroup} flexCenter`}>
-        <LocationSearch setSearch = {setSearch} setValue = {setValue}/>
-        <SearchResults results = {search} sendDataToParent={handleChildData} searchValue = {value}/>
+        <LocationSearch setSearch={setSearch} setValue={setValue}>
+          <SearchResults results = {search} sendDataToParent={handleChildData} searchValue = {value}/>
+        </LocationSearch>
       </div>
       <div className={`${styles.navGroup} flexRight`}>
         <Link
